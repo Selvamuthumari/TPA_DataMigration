@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "AzureETL_MyPlans", "AzureETL_MyPlans\AzureETL_MyPlans.dtproj", "{1AFCCA46-2C22-4DEB-9E2F-583C7A442E78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Azure|Any CPU = Azure|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AFCCA46-2C22-4DEB-9E2F-583C7A442E78}.Azure|Any CPU.ActiveCfg = Azure
+		{1AFCCA46-2C22-4DEB-9E2F-583C7A442E78}.Azure|Any CPU.Build.0 = Azure
+		{1AFCCA46-2C22-4DEB-9E2F-583C7A442E78}.Debug|Any CPU.ActiveCfg = Development
+		{1AFCCA46-2C22-4DEB-9E2F-583C7A442E78}.Debug|Any CPU.Build.0 = Development
+		{1AFCCA46-2C22-4DEB-9E2F-583C7A442E78}.Development|Any CPU.ActiveCfg = Development
+		{1AFCCA46-2C22-4DEB-9E2F-583C7A442E78}.Development|Any CPU.Build.0 = Development
+		{1AFCCA46-2C22-4DEB-9E2F-583C7A442E78}.Release|Any CPU.ActiveCfg = Azure
+		{1AFCCA46-2C22-4DEB-9E2F-583C7A442E78}.Release|Any CPU.Build.0 = Azure
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0469313C-4770-49E3-9471-BE0CF0DC5D35}
+	EndGlobalSection
+EndGlobal

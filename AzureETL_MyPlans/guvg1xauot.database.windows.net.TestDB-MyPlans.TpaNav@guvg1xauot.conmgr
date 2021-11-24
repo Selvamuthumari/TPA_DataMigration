@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="guvg1xauot.database.windows.net.TestDB-MyPlans.TpaNav@guvg1xauot"
+  DTS:DTSID="{BB294BB5-07AF-44B3-9C5B-2F9F4310971E}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=guvg1xauot.database.windows.net;User ID=TpaNav@guvg1xauot;Initial Catalog=TestDB-MyPlans;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiU+eTjRVJEqcWea3gF/yGQAAAAACAAAAAAADZgAAwAAAABAAAAC18ek+O/dzOdIkKH8vJTm/AAAAAASAAACgAAAAEAAAABYb1tFqRH4UusFzfPaZ9b6AAAAA0GeN9IAVV56WOgeY5ffalblajiq/yuc7J6Vxt779Fz+MGcBzO0bgzvsba6VjBXVKp2hpDhe1T+Pk/iut+XeieLh7Q2QBn9DvW7pek6pS9QfqFfs1PYLtgjaEZBu7SeMQ/8Afm9MBsA3gRlinMVAe47XxLcLikDy9RR7NFGqd6X4UAAAAhRvQj/Nv5SWbJYLNq7NpGSC+K4I=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
