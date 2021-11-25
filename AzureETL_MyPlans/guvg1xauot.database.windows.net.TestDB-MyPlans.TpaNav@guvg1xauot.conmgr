@@ -7,10 +7,10 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=guvg1xauot.database.windows.net;User ID=TpaNav@guvg1xauot;Initial Catalog=TestDB-MyPlans;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      DTS:ConnectionString="Data Source=guvg1xauot.database.windows.net;User ID=TpaNav@guvg1xauot;Initial Catalog=TestDB-MyPlans-23Nov;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiU+eTjRVJEqcWea3gF/yGQAAAAACAAAAAAADZgAAwAAAABAAAAC18ek+O/dzOdIkKH8vJTm/AAAAAASAAACgAAAAEAAAABYb1tFqRH4UusFzfPaZ9b6AAAAA0GeN9IAVV56WOgeY5ffalblajiq/yuc7J6Vxt779Fz+MGcBzO0bgzvsba6VjBXVKp2hpDhe1T+Pk/iut+XeieLh7Q2QBn9DvW7pek6pS9QfqFfs1PYLtgjaEZBu7SeMQ/8Afm9MBsA3gRlinMVAe47XxLcLikDy9RR7NFGqd6X4UAAAAhRvQj/Nv5SWbJYLNq7NpGSC+K4I=</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAth34+1pVs0ygo23oPUlhpwAAAAACAAAAAAAQZgAAAAEAACAAAACNJlH0h6AD+g8wWusZQiaJlRv98WywVaiOZmuD2G0eIwAAAAAOgAAAAAIAACAAAAA95As6jEoBgmxb/5y6TF4TUThWg6MAm/libRpL+Cc01IAAAABBXv+4UnipbLLJXqBPYqJCOVhsHt8HeMhSvp8uqOtW3aWxnBEzQ1lFFieYVKmqohKfzROeN5JzrF4fk3OeLW4CMLQuCBLLXBt8Es5qig3zq/i2TY3kZKfaOKwnxOdVby6/nUOxAWtkvWSggKRuXO2XJrCrFdMyWI4zu9lxukIJ/EAAAADrTi7O4QA4VF4ADfj1TAxOzfd3GiJ/9nJGiDQXklU3I3fCymviz3HjWs4yQr7WYU//KD388AyqMGhGITT4n2MT</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Copy_ParentTables_Data"
   DTS:PackageType="5"
-  DTS:VersionBuild="122"
-  DTS:VersionGUID="{446D0D18-851C-4D92-97B2-1FFE2C10CD9E}">
+  DTS:VersionBuild="123"
+  DTS:VersionGUID="{C8E44617-7B90-43F5-ACF1-637B9A0A4FDB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,11 +25,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=guvg1xauot.database.windows.net;User ID=TpaNav@guvg1xauot;Initial Catalog=TestDB-PPC;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=guvg1xauot.database.windows.net;User ID=TpaNav@guvg1xauot;Initial Catalog=TestDB-PPC-23Nov;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiU+eTjRVJEqcWea3gF/yGQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACxLNFprC0qLUZFiDtgYAbZAAAAAASAAACgAAAAEAAAALWgzmEdiYr5J/w9z6Up+jEgAAAAIUpJgwM2mfG+mviJJpskkJqsSJTB/JXAv8mWDI7tEFgUAAAAZwwK06AT4/U+RsQzRbCNTLA0/Wk</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAth34+1pVs0ygo23oPUlhpwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADf55oduJSO4DhLpis8GMKJoFJu2dBb9B+2r5dLGJ7jBwAAAAAOgAAAAAIAACAAAACJUJ/tgB6pRSguVqVc7cneJjpka1S7enAP/jSs7lAPeyAAAAAi/GOsrbMhbWS5hhJESI6RUwvCXLv2JtTUqLWP7ILjKUAAAADQUXQR/UMl9u/9n4v9tjAPo/4+oARGSjctGSk/XJ8MwHkx32Y3qqGtmrOW7JkuqvJRnAbVSXzHS/UgBb3f7AEa</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -29964,6 +29964,18 @@
           Id="Package\PlanParticipantType_Lib Data Migration"
           TopLeft="224.166657759084,4619.06667037222" />
         <NodeLayout
+          Size="244,41.6"
+          Id="Package\Portal_NewTPAFirm Data Migration"
+          TopLeft="164.16666014327,9887.06667004161" />
+        <NodeLayout
+          Size="279.2,41.6"
+          Id="Package\Portal_ReasonForDeparture Data Migration"
+          TopLeft="193.333325650957,10024.8666673348" />
+        <NodeLayout
+          Size="252,41.6"
+          Id="Package\Portal_TakeOverFrom Data Migration"
+          TopLeft="201.666658653154,10140.8666692358" />
+        <NodeLayout
           Size="228.8,41.6"
           Id="Package\PricingGroupsLib Data Migration"
           TopLeft="218.333324657547,4735.06667111609" />
@@ -32783,14 +32795,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="244,41.6"
-          Id="Package\Portal_NewTPAFirm Data Migration"
-          TopLeft="164.16666014327,9887.06667004161" />
-        <NodeLayout
-          Size="279.2,41.6"
-          Id="Package\Portal_ReasonForDeparture Data Migration"
-          TopLeft="193.333325650957,10024.8666673348" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 94]"
           TopLeft="315.09999254942,9827.06667004161">
@@ -32859,10 +32863,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="252,41.6"
-          Id="Package\Portal_TakeOverFrom Data Migration"
-          TopLeft="201.666658653154,10140.8666692358" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 96]"
           TopLeft="330.299992152056,10066.4666673348">
@@ -38025,6 +38025,234 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\Portal_NewTPAFirm Data Migration">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\Portal_NewTPAFirm Data Migration\Portal_NewTPAFirm"
+          TopLeft="37.5,35.5" />
+        <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\Portal_NewTPAFirm Data Migration\Portal_NewTPAFirm_MP"
+          TopLeft="312.5,49.5" />
+        <EdgeLayout
+          Id="Package\Portal_NewTPAFirm Data Migration.Paths[OLE DB Source Output]"
+          TopLeft="211.1,56.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="101.4,14"
+              Start="0,0"
+              End="93.9,14">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="46.7,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46.7,0"
+                    Point2="50.7,0"
+                    Point3="50.7,4" />
+                  <mssgle:LineSegment
+                    End="50.7,10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.7,10"
+                    Point2="50.7,14"
+                    Point3="54.7,14" />
+                  <mssgle:LineSegment
+                    End="93.9,14" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_NewTPAFirm Data Migration\Portal_NewTPAFirm">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_NewTPAFirm Data Migration\Portal_NewTPAFirm_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Portal_ReasonForDeparture Data Migration">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="208.8,41.6"
+          Id="Package\Portal_ReasonForDeparture Data Migration\Portal_ReasonForDeparture"
+          TopLeft="37.5,35.5" />
+        <NodeLayout
+          Size="230.4,41.6"
+          Id="Package\Portal_ReasonForDeparture Data Migration\Portal_ReasonForDeparture_MP"
+          TopLeft="312.5,49.5" />
+        <EdgeLayout
+          Id="Package\Portal_ReasonForDeparture Data Migration.Paths[OLE DB Source Output]"
+          TopLeft="246.3,56.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="66.2,14"
+              Start="0,0"
+              End="58.7,14">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="29.1,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.1,0"
+                    Point2="33.1,0"
+                    Point3="33.1,4" />
+                  <mssgle:LineSegment
+                    End="33.1,10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="33.1,10"
+                    Point2="33.1,14"
+                    Point3="37.1,14" />
+                  <mssgle:LineSegment
+                    End="58.7,14" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_ReasonForDeparture Data Migration\Portal_ReasonForDeparture">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_ReasonForDeparture Data Migration\Portal_ReasonForDeparture_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Portal_TakeOverFrom Data Migration">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\Portal_TakeOverFrom Data Migration\Portal_TakeOverFrom"
+          TopLeft="37.5,35.5" />
+        <NodeLayout
+          Size="202.4,41.6"
+          Id="Package\Portal_TakeOverFrom Data Migration\Portal_TakeOverFrom_MP"
+          TopLeft="312.5,49.5" />
+        <EdgeLayout
+          Id="Package\Portal_TakeOverFrom Data Migration.Paths[OLE DB Source Output]"
+          TopLeft="219.1,56.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.4,14"
+              Start="0,0"
+              End="85.9,14">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="42.7,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="42.7,0"
+                    Point2="46.7,0"
+                    Point3="46.7,4" />
+                  <mssgle:LineSegment
+                    End="46.7,10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46.7,10"
+                    Point2="46.7,14"
+                    Point3="50.7,14" />
+                  <mssgle:LineSegment
+                    End="85.9,14" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_TakeOverFrom Data Migration\Portal_TakeOverFrom">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_TakeOverFrom Data Migration\Portal_TakeOverFrom_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\PricingGroupsLib Data Migration">
     <LayoutInfo>
       <GraphLayout
@@ -40275,234 +40503,6 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\YearsRequirement_Lib Data Migration\YearsRequirement_Lib_MP">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Portal_NewTPAFirm Data Migration">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="173.6,41.6"
-          Id="Package\Portal_NewTPAFirm Data Migration\Portal_NewTPAFirm"
-          TopLeft="37.5,35.5" />
-        <NodeLayout
-          Size="194.4,41.6"
-          Id="Package\Portal_NewTPAFirm Data Migration\Portal_NewTPAFirm_MP"
-          TopLeft="312.5,49.5" />
-        <EdgeLayout
-          Id="Package\Portal_NewTPAFirm Data Migration.Paths[OLE DB Source Output]"
-          TopLeft="211.1,56.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="101.4,14"
-              Start="0,0"
-              End="93.9,14">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="46.7,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="46.7,0"
-                    Point2="50.7,0"
-                    Point3="50.7,4" />
-                  <mssgle:LineSegment
-                    End="50.7,10" />
-                  <mssgle:CubicBezierSegment
-                    Point1="50.7,10"
-                    Point2="50.7,14"
-                    Point3="54.7,14" />
-                  <mssgle:LineSegment
-                    End="93.9,14" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Portal_NewTPAFirm Data Migration\Portal_NewTPAFirm">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Portal_NewTPAFirm Data Migration\Portal_NewTPAFirm_MP">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Portal_ReasonForDeparture Data Migration">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="208.8,41.6"
-          Id="Package\Portal_ReasonForDeparture Data Migration\Portal_ReasonForDeparture"
-          TopLeft="37.5,35.5" />
-        <NodeLayout
-          Size="230.4,41.6"
-          Id="Package\Portal_ReasonForDeparture Data Migration\Portal_ReasonForDeparture_MP"
-          TopLeft="312.5,49.5" />
-        <EdgeLayout
-          Id="Package\Portal_ReasonForDeparture Data Migration.Paths[OLE DB Source Output]"
-          TopLeft="246.3,56.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="66.2,14"
-              Start="0,0"
-              End="58.7,14">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="29.1,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="29.1,0"
-                    Point2="33.1,0"
-                    Point3="33.1,4" />
-                  <mssgle:LineSegment
-                    End="33.1,10" />
-                  <mssgle:CubicBezierSegment
-                    Point1="33.1,10"
-                    Point2="33.1,14"
-                    Point3="37.1,14" />
-                  <mssgle:LineSegment
-                    End="58.7,14" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Portal_ReasonForDeparture Data Migration\Portal_ReasonForDeparture">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Portal_ReasonForDeparture Data Migration\Portal_ReasonForDeparture_MP">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Portal_TakeOverFrom Data Migration">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="181.6,41.6"
-          Id="Package\Portal_TakeOverFrom Data Migration\Portal_TakeOverFrom"
-          TopLeft="37.5,35.5" />
-        <NodeLayout
-          Size="202.4,41.6"
-          Id="Package\Portal_TakeOverFrom Data Migration\Portal_TakeOverFrom_MP"
-          TopLeft="312.5,49.5" />
-        <EdgeLayout
-          Id="Package\Portal_TakeOverFrom Data Migration.Paths[OLE DB Source Output]"
-          TopLeft="219.1,56.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="93.4,14"
-              Start="0,0"
-              End="85.9,14">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="42.7,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="42.7,0"
-                    Point2="46.7,0"
-                    Point3="46.7,4" />
-                  <mssgle:LineSegment
-                    End="46.7,10" />
-                  <mssgle:CubicBezierSegment
-                    Point1="46.7,10"
-                    Point2="46.7,14"
-                    Point3="50.7,14" />
-                  <mssgle:LineSegment
-                    End="85.9,14" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Portal_TakeOverFrom Data Migration\Portal_TakeOverFrom">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Portal_TakeOverFrom Data Migration\Portal_TakeOverFrom_MP">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
