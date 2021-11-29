@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "AzureETL_MyPlans", "AzureETL_MyPlans\AzureETL_MyPlans.dtproj", "{1AFCCA46-2C22-4DEB-9E2F-583C7A442E78}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B4F2E5D5-5647-4223-B411-38C9F0C1C251}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Azure|Any CPU = Azure|Any CPU
