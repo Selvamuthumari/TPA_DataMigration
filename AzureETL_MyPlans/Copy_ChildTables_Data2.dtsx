@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Copy_ChildTables_Data2"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{F6D1139F-1B67-4787-85F8-E752BA1BC336}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{87061C94-F99F-45F2-BA57-77C5C3A59F04}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAth34+1pVs0ygo23oPUlhpwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADNFuux+SNCAwystaei9jbvSAyID0ZkG0D4fBt25a9EOAAAAAAOgAAAAAIAACAAAADilgtp352Cce+57LNudU4hZAtIxKnzoGAUCzSjq4N74yAAAACRU4AGJwLaBFBallaFg+85a8lDdkEeWefzA3ELHL6akUAAAAALkCBxtZ85OOgyOIfwT6IT9U8ovs+tFpLFYYAKxkkmwbQSNRi7bokO5zWDVeFvBG7N9TyBtKGZ6gdthDwuNsE4</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAth34+1pVs0ygo23oPUlhpwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAQuYm2CDnlFAXUXcBhs4rQqtbqj9cTOJ1u/aMfONQv5AAAAAAOgAAAAAIAACAAAAAfUbLWh8jjFJ/JSaIktc6tlBaFTCHJcl212emWYtRlhiAAAACeQMIrEAW/WYeapxk+dniqU2u6Qk97kZUadsgYt0MHiUAAAABSohFGkUtdj59epZk/yW502lOp/A5DshZQ7wK+NhZ9LWsiihkuO88EbZwUe9rR8jT8837u4DFe1bdP333AANRr</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -27845,15 +27845,15 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
     design-time-name="Package\EmailPlanReview_Lib Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\EmailPlanReview_Lib Data Migration\EmailPlanReview_Lib"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="200.8,41.6"
           Id="Package\EmailPlanReview_Lib Data Migration\EmailPlanReview_Lib_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\EmailPlanReview_Lib Data Migration\EmailPlanReview_Lib"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\EmailPlanReview_Lib Data Migration.Paths[OLE DB Source Output]"
           TopLeft="268.833327240415,61.8333334504233">
@@ -27873,9 +27873,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
