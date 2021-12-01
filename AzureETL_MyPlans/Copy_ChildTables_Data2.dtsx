@@ -11,29 +11,10 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Copy_ChildTables_Data2"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{87061C94-F99F-45F2-BA57-77C5C3A59F04}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{1227DABB-276A-49D2-B166-3980A113A5B7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{EF2FB532-DAD3-4767-B48D-C9E82185445F}"
-      DTS:ObjectName="guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=guvg1xauot.database.windows.net;User ID=TpaNav@guvg1xauot;Initial Catalog=TestDB-PPC-23Nov;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAth34+1pVs0ygo23oPUlhpwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAQuYm2CDnlFAXUXcBhs4rQqtbqj9cTOJ1u/aMfONQv5AAAAAAOgAAAAAIAACAAAAAfUbLWh8jjFJ/JSaIktc6tlBaFTCHJcl212emWYtRlhiAAAACeQMIrEAW/WYeapxk+dniqU2u6Qk97kZUadsgYt0MHiUAAAABSohFGkUtdj59epZk/yW502lOp/A5DshZQ7wK+NhZ9LWsiihkuO88EbZwUe9rR8jT8837u4DFe1bdP333AANRr</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -344,8 +325,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\EmailPlanReview_Lib Data Migration\EmailPlanReview_Lib_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1256,7 +1237,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -1268,7 +1249,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -1277,8 +1258,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\MarketValuationTracking Data Migration\MarketValuationTracking_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2605,7 +2586,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -2617,7 +2598,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -2626,8 +2607,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\MonthlyStatement Data Migration\MonthlyStatement_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3348,7 +3329,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -3360,7 +3341,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -3369,8 +3350,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Notes Data Migration\Notes_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3858,7 +3839,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -3870,7 +3851,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -3879,8 +3860,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\ParticipantFeeDisclosure Data Migration\ParticipantFeeDisclosure_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4339,7 +4320,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -4351,7 +4332,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -4360,8 +4341,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\PlanExpiringFormulaDocuments Data Migration\PlanExpiringFormulaDocuments_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5640,7 +5621,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -5652,7 +5633,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -5661,8 +5642,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Plans Data Migration\Plans_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -8764,7 +8745,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -8776,7 +8757,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -8785,8 +8766,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
               <connections>
                 <connection
                   refId="Package\Plans_Year_To_Year Data Migration\Plans_YearToYear_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -10364,7 +10345,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -10376,7 +10357,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -10385,8 +10366,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_AdditionalServicesHistory Data Migration\Portal_AdditionalServicesHistory_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -10746,7 +10727,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -10758,7 +10739,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -10767,8 +10748,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_AdvisorNotes Data Migration\Portal_AdvisorNotes_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -11261,7 +11242,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -11273,7 +11254,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -11282,8 +11263,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_ChangeRequest Data Migration\Portal_ChangeRequest_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -11708,7 +11689,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -11720,7 +11701,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -11729,8 +11710,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_ClientContactType Data Migration\Portal_ClientContactType_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -12247,7 +12228,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -12259,7 +12240,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -12268,8 +12249,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_ClientFilesActivity Data Migration\Portal_ClientFilesActivity_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -12880,7 +12861,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -12892,7 +12873,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -12901,8 +12882,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_ComplianceCalender_Master Data Migration\Portal_ComplianceCalender_Master_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -13375,7 +13356,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -13387,7 +13368,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -13396,8 +13377,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
               <connections>
                 <connection
                   refId="Package\Portal_ConfirmationOfContribution Data Migration\Portal_ConfirmationOfContribution_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -13763,7 +13744,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -13775,7 +13756,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -13784,8 +13765,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
               <connections>
                 <connection
                   refId="Package\Portal_ContributionDepositDetails Data Migration\Portal_ContributionDepositDetails_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -14079,7 +14060,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -14091,7 +14072,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -14100,8 +14081,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
               <connections>
                 <connection
                   refId="Package\Portal_DocMaintainedBy Data Migration\Portal_DocMaintainedBy_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -14843,7 +14824,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -14855,7 +14836,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -14864,8 +14845,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
               <connections>
                 <connection
                   refId="Package\Portal_DocumentDetails Data Migration\Portal_DocumentDetails_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -15537,7 +15518,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -15549,7 +15530,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -15558,8 +15539,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
               <connections>
                 <connection
                   refId="Package\Portal_DocumentTaskEvents Data Migration\Portal_DocumentTaskEvents_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -15992,7 +15973,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -16004,7 +15985,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -16013,8 +15994,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
               <connections>
                 <connection
                   refId="Package\Portal_DocumentTemplateMapping Data Migration\Portal_DocumentTemplateMapping_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -16650,7 +16631,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -16662,7 +16643,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -16671,8 +16652,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
               <connections>
                 <connection
                   refId="Package\Portal_DocumentTemplates Data Migration\Portal_DocumentTemplates_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -17535,7 +17516,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -17547,7 +17528,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -17556,8 +17537,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000'))</property>
               <connections>
                 <connection
                   refId="Package\Portal_DocumentTracking Data Migration\Portal_DocumentTracking_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -18233,7 +18214,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -18245,7 +18226,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -18254,8 +18235,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_OptionalOwnership Data Migration\Portal_OptionalOwnership_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -18670,7 +18651,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -18682,7 +18663,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -18691,8 +18672,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_OwnershipConfirmationTimestamp Data Migration\Portal_OwnershipConfirmationTimestamp_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -19069,7 +19050,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -19081,7 +19062,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -19090,8 +19071,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_Permissions Data Migration\Portal_Permissions_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -19561,7 +19542,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -19573,7 +19554,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -19582,8 +19563,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_ProgressBarStat Data Migration\Portal_ProgressBarStat_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -20129,7 +20110,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -20141,7 +20122,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -20150,8 +20131,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_ReopenDocumentTask Data Migration\Portal_ReopenDocumentTask_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -20522,7 +20503,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -20534,7 +20515,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -20543,8 +20524,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_Roles Data Migration\Portal_Roles_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -21332,7 +21313,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -21344,7 +21325,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -21353,8 +21334,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_TimeZone Data Migration\Portal_TimeZone_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -22024,7 +22005,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -22036,7 +22017,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -22045,8 +22026,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_ToDoAssigneeHistory Data Migration\Portal_ToDoAssigneeHistory_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -22418,7 +22399,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -22430,7 +22411,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -22439,8 +22420,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_UserClientContact Data Migration\Portal_UserClientContact_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -22827,7 +22808,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -22839,7 +22820,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -22848,8 +22829,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Portal_UserSignatures Data Migration\Portal_UserSignatures_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -23661,7 +23642,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -23673,7 +23654,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -23682,8 +23663,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\PricingDetails Data Migration\PricingDetails_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -24439,7 +24420,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -24451,7 +24432,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -24460,8 +24441,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\PricingElements Data Migration\PricingElements_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -24934,7 +24915,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -24946,7 +24927,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -24955,8 +24936,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\PricingHeader Data Migration\PricingHeader_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -25392,7 +25373,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -25404,7 +25385,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -25413,8 +25394,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Pricing_Answers Data Migration\Pricing_Answers_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -26032,7 +26013,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -26044,7 +26025,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -26053,8 +26034,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\Pricing_Schedule Data Migration\Pricing_Schedule_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -27179,7 +27160,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -27191,7 +27172,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -27200,8 +27181,8 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
               <connections>
                 <connection
                   refId="Package\ProspectPlan Data Migration\ProspectPlan_MP.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
-                  connectionManagerRefId="Package.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC.TpaNav@guvg1xauot]"
+                  connectionManagerID="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[guvg1xauot.database.windows.net.TestDB-PPC-23Nov.TpaNav@guvg1xauot]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -27757,7 +27738,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
         <NodeLayout
           Size="260.8,41.6"
           Id="Package\Portal_DocumentDetails Data Migration"
-          TopLeft="80.8333325054911,2044.73333216932" />
+          TopLeft="79.9999992052715,2044.73333216932" />
         <NodeLayout
           Size="283.2,41.6"
           Id="Package\Portal_DocumentTaskEvents Data Migration"
@@ -27813,7 +27794,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
         <NodeLayout
           Size="253.6,41.6"
           Id="Package\Portal_UserSignatures Data Migration"
-          TopLeft="67.4999997019759,3599.99999892553" />
+          TopLeft="67.4999997019759,3601.73333227264" />
         <NodeLayout
           Size="226.4,41.6"
           Id="Package\Pricing_Answers Data Migration"
@@ -27821,7 +27802,7 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
         <NodeLayout
           Size="229.6,41.6"
           Id="Package\Pricing_Schedule Data Migration"
-          TopLeft="80.833332505491,3839.46666413202" />
+          TopLeft="80.833332505491,3841.19999747913" />
         <NodeLayout
           Size="212.8,41.6"
           Id="Package\PricingDetails Data Migration"
@@ -27879,11 +27860,24 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\EmailPlanReview_Lib Data Migration\EmailPlanReview_Lib_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\MarketValuationTracking Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="193.6,41.6"
           Id="Package\MarketValuationTracking Data Migration\MarketValuationTracking"
@@ -27911,27 +27905,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\MarketValuationTracking Data Migration\MarketValuationTracking_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\MonthlyStatement Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\MonthlyStatement Data Migration\MonthlyStatement"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="184,41.6"
           Id="Package\MonthlyStatement Data Migration\MonthlyStatement_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\MonthlyStatement Data Migration\MonthlyStatement"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\MonthlyStatement Data Migration.Paths[OLE DB Source Output]"
           TopLeft="260.433327240415,61.8333334504233">
@@ -27951,27 +27956,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\MonthlyStatement Data Migration\MonthlyStatement_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Notes Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="105.6,41.6"
-          Id="Package\Notes Data Migration\Notes"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="127.2,41.6"
           Id="Package\Notes Data Migration\Notes_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="105.6,41.6"
+          Id="Package\Notes Data Migration\Notes"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Notes Data Migration.Paths[OLE DB Source Output]"
           TopLeft="232.033327240415,61.8333334504233">
@@ -27991,19 +28007,30 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Notes Data Migration\Notes_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\ParticipantFeeDisclosure Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="194.4,41.6"
           Id="Package\ParticipantFeeDisclosure Data Migration\ParticipantFeeDisclosure"
@@ -28031,27 +28058,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ParticipantFeeDisclosure Data Migration\ParticipantFeeDisclosure_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\PlanExpiringFormulaDocuments Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="228,41.6"
-          Id="Package\PlanExpiringFormulaDocuments Data Migration\PlanExpiringFormulaDocuments"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="248.8,41.6"
           Id="Package\PlanExpiringFormulaDocuments Data Migration\PlanExpiringFormulaDocuments_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="228,41.6"
+          Id="Package\PlanExpiringFormulaDocuments Data Migration\PlanExpiringFormulaDocuments"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\PlanExpiringFormulaDocuments Data Migration.Paths[OLE DB Source Output]"
           TopLeft="293.033327240415,61.8333334504233">
@@ -28071,27 +28109,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PlanExpiringFormulaDocuments Data Migration\PlanExpiringFormulaDocuments_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Plans Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="104.8,41.6"
-          Id="Package\Plans Data Migration\Plans"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="125.6,41.6"
           Id="Package\Plans Data Migration\Plans_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="104.8,41.6"
+          Id="Package\Plans Data Migration\Plans"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Plans Data Migration.Paths[OLE DB Source Output]"
           TopLeft="231.433327240414,61.8333334504233">
@@ -28111,19 +28160,30 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Plans Data Migration\Plans_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Plans_Year_To_Year Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="166.4,41.6"
           Id="Package\Plans_Year_To_Year Data Migration\Plans_YearToYear"
@@ -28151,19 +28211,30 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Plans_Year_To_Year Data Migration\Plans_YearToYear_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_AdditionalServicesHistory Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="229.6,41.6"
           Id="Package\Portal_AdditionalServicesHistory Data Migration\Portal_AdditionalServicesHistory"
@@ -28191,19 +28262,30 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_AdditionalServicesHistory Data Migration\Portal_AdditionalServicesHistory_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_AdvisorNotes Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="173.6,41.6"
           Id="Package\Portal_AdvisorNotes Data Migration\Portal_AdvisorNotes"
@@ -28231,27 +28313,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_AdvisorNotes Data Migration\Portal_AdvisorNotes_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_ChangeRequest Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="186.4,41.6"
-          Id="Package\Portal_ChangeRequest Data Migration\Portal_ChangeRequest"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="208,41.6"
           Id="Package\Portal_ChangeRequest Data Migration\Portal_ChangeRequest_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\Portal_ChangeRequest Data Migration\Portal_ChangeRequest"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_ChangeRequest Data Migration.Paths[OLE DB Source Output]"
           TopLeft="272.433327240415,61.8333334504233">
@@ -28271,27 +28364,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_ChangeRequest Data Migration\Portal_ChangeRequest_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_ClientContactType Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="196.8,41.6"
-          Id="Package\Portal_ClientContactType Data Migration\Portal_ClientContactType"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="218.4,41.6"
           Id="Package\Portal_ClientContactType Data Migration\Portal_ClientContactType_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="196.8,41.6"
+          Id="Package\Portal_ClientContactType Data Migration\Portal_ClientContactType"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_ClientContactType Data Migration.Paths[OLE DB Source Output]"
           TopLeft="277.633327240414,61.8333334504233">
@@ -28311,27 +28415,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_ClientContactType Data Migration\Portal_ClientContactType_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_ClientFilesActivity Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="193.6,41.6"
-          Id="Package\Portal_ClientFilesActivity Data Migration\Portal_ClientFilesActivity"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="214.4,41.6"
           Id="Package\Portal_ClientFilesActivity Data Migration\Portal_ClientFilesActivity_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="193.6,41.6"
+          Id="Package\Portal_ClientFilesActivity Data Migration\Portal_ClientFilesActivity"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_ClientFilesActivity Data Migration.Paths[OLE DB Source Output]"
           TopLeft="275.833327240415,61.8333334504233">
@@ -28351,27 +28466,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_ClientFilesActivity Data Migration\Portal_ClientFilesActivity_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_ComplianceCalender_Master Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="246.4,41.6"
-          Id="Package\Portal_ComplianceCalender_Master Data Migration\Portal_ComplianceCalender_Master"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="267.2,41.6"
           Id="Package\Portal_ComplianceCalender_Master Data Migration\Portal_ComplianceCalender_Master_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="246.4,41.6"
+          Id="Package\Portal_ComplianceCalender_Master Data Migration\Portal_ComplianceCalender_Master"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_ComplianceCalender_Master Data Migration.Paths[OLE DB Source Output]"
           TopLeft="302.233327240415,61.8333334504233">
@@ -28391,27 +28517,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_ComplianceCalender_Master Data Migration\Portal_ComplianceCalender_Master_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_ConfirmationOfContribution Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="237.6,41.6"
-          Id="Package\Portal_ConfirmationOfContribution Data Migration\Portal_ConfirmationOfContribution"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="259.2,41.6"
           Id="Package\Portal_ConfirmationOfContribution Data Migration\Portal_ConfirmationOfContribution_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="237.6,41.6"
+          Id="Package\Portal_ConfirmationOfContribution Data Migration\Portal_ConfirmationOfContribution"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_ConfirmationOfContribution Data Migration.Paths[OLE DB Source Output]"
           TopLeft="298.033327240415,61.8333334504233">
@@ -28431,27 +28568,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_ConfirmationOfContribution Data Migration\Portal_ConfirmationOfContribution_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_ContributionDepositDetails Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="234.4,41.6"
-          Id="Package\Portal_ContributionDepositDetails Data Migration\Portal_ContributionDepositDetails"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="256,41.6"
           Id="Package\Portal_ContributionDepositDetails Data Migration\Portal_ContributionDepositDetails_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="234.4,41.6"
+          Id="Package\Portal_ContributionDepositDetails Data Migration\Portal_ContributionDepositDetails"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_ContributionDepositDetails Data Migration.Paths[OLE DB Source Output]"
           TopLeft="296.433327240415,61.8333334504233">
@@ -28471,27 +28619,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_ContributionDepositDetails Data Migration\Portal_ContributionDepositDetails_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_DocMaintainedBy Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="192.8,41.6"
-          Id="Package\Portal_DocMaintainedBy Data Migration\Portal_DocMaintainedBy"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="214.4,41.6"
           Id="Package\Portal_DocMaintainedBy Data Migration\Portal_DocMaintainedBy_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="192.8,41.6"
+          Id="Package\Portal_DocMaintainedBy Data Migration\Portal_DocMaintainedBy"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_DocMaintainedBy Data Migration.Paths[OLE DB Source Output]"
           TopLeft="275.633327240414,61.8333334504233">
@@ -28511,27 +28670,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_DocMaintainedBy Data Migration\Portal_DocMaintainedBy_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_DocumentDetails Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="190.4,41.6"
-          Id="Package\Portal_DocumentDetails Data Migration\Portal_DocumentDetails"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="212,41.6"
           Id="Package\Portal_DocumentDetails Data Migration\Portal_DocumentDetails_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="190.4,41.6"
+          Id="Package\Portal_DocumentDetails Data Migration\Portal_DocumentDetails"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_DocumentDetails Data Migration.Paths[OLE DB Source Output]"
           TopLeft="274.433327240415,61.8333334504233">
@@ -28551,27 +28721,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_DocumentDetails Data Migration\Portal_DocumentDetails_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_DocumentTaskEvents Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="212.8,41.6"
-          Id="Package\Portal_DocumentTaskEvents Data Migration\Portal_DocumentTaskEvents"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="234.4,41.6"
           Id="Package\Portal_DocumentTaskEvents Data Migration\Portal_DocumentTaskEvents_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="212.8,41.6"
+          Id="Package\Portal_DocumentTaskEvents Data Migration\Portal_DocumentTaskEvents"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_DocumentTaskEvents Data Migration.Paths[OLE DB Source Output]"
           TopLeft="285.633327240414,61.8333334504233">
@@ -28591,27 +28772,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_DocumentTaskEvents Data Migration\Portal_DocumentTaskEvents_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_DocumentTemplateMapping Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="242.4,41.6"
-          Id="Package\Portal_DocumentTemplateMapping Data Migration\Portal_DocumentTemplateMapping"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="263.2,41.6"
           Id="Package\Portal_DocumentTemplateMapping Data Migration\Portal_DocumentTemplateMapping_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="242.4,41.6"
+          Id="Package\Portal_DocumentTemplateMapping Data Migration\Portal_DocumentTemplateMapping"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_DocumentTemplateMapping Data Migration.Paths[OLE DB Source Output]"
           TopLeft="300.233327240415,61.8333334504233">
@@ -28631,27 +28823,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_DocumentTemplateMapping Data Migration\Portal_DocumentTemplateMapping_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_DocumentTemplates Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="207.2,41.6"
-          Id="Package\Portal_DocumentTemplates Data Migration\Portal_DocumentTemplates"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="228.8,41.6"
           Id="Package\Portal_DocumentTemplates Data Migration\Portal_DocumentTemplates_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="207.2,41.6"
+          Id="Package\Portal_DocumentTemplates Data Migration\Portal_DocumentTemplates"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_DocumentTemplates Data Migration.Paths[OLE DB Source Output]"
           TopLeft="282.833327240415,61.8333334504233">
@@ -28671,19 +28874,30 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_DocumentTemplates Data Migration\Portal_DocumentTemplates_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_DocumentTracking Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="198.4,41.6"
           Id="Package\Portal_DocumentTracking Data Migration\Portal_DocumentTracking"
@@ -28711,19 +28925,30 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_DocumentTracking Data Migration\Portal_DocumentTracking_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_OptionalOwnership Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="200,41.6"
           Id="Package\Portal_OptionalOwnership Data Migration\Portal_OptionalOwnership"
@@ -28751,27 +28976,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_OptionalOwnership Data Migration\Portal_OptionalOwnership_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_OwnershipConfirmationTimestamp Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="272,41.6"
-          Id="Package\Portal_OwnershipConfirmationTimestamp Data Migration\Portal_OwnershipConfirmationTimestamp"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="292.8,41.6"
           Id="Package\Portal_OwnershipConfirmationTimestamp Data Migration\Portal_OwnershipConfirmationTimestamp_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="272,41.6"
+          Id="Package\Portal_OwnershipConfirmationTimestamp Data Migration\Portal_OwnershipConfirmationTimestamp"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_OwnershipConfirmationTimestamp Data Migration.Paths[OLE DB Source Output]"
           TopLeft="315.033327240415,61.8333334504233">
@@ -28791,59 +29027,81 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_OwnershipConfirmationTimestamp Data Migration\Portal_OwnershipConfirmationTimestamp_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_Permissions Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\Portal_Permissions Data Migration\Portal_Permissions_MP"
+          TopLeft="172.166661236022,154.633334256278" />
         <NodeLayout
           Size="168,41.6"
           Id="Package\Portal_Permissions Data Migration\Portal_Permissions"
           TopLeft="175.499993244807,20.2333334504233" />
-        <NodeLayout
-          Size="189.6,41.6"
-          Id="Package\Portal_Permissions Data Migration\Portal_Permissions_MP"
-          TopLeft="172.166661236022,151.633334256278" />
         <EdgeLayout
           Id="Package\Portal_Permissions Data Migration.Paths[OLE DB Source Output]"
           TopLeft="263.233327240415,61.8333334504233">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,89.8000008058547"
+              EndConnector="0,92.8000008058547"
               Start="0,0"
-              End="0,82.3000008058547">
+              End="0,85.3000008058547">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,82.3000008058547" />
+                    End="0,85.3000008058547" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_Permissions Data Migration\Portal_Permissions_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_ProgressBarStat Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="188,41.6"
           Id="Package\Portal_ProgressBarStat Data Migration\Portal_ProgressBarStat"
@@ -28871,19 +29129,30 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_ProgressBarStat Data Migration\Portal_ProgressBarStat_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_ReopenDocumentTask Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="217.6,41.6"
           Id="Package\Portal_ReopenDocumentTask Data Migration\Portal_ReopenDocumentTask"
@@ -28911,27 +29180,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_ReopenDocumentTask Data Migration\Portal_ReopenDocumentTask_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_Roles Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\Portal_Roles Data Migration\Portal_Roles"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="159.2,41.6"
           Id="Package\Portal_Roles Data Migration\Portal_Roles_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Portal_Roles Data Migration\Portal_Roles"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_Roles Data Migration.Paths[OLE DB Source Output]"
           TopLeft="248.233327240414,61.8333334504233">
@@ -28951,27 +29231,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_Roles Data Migration\Portal_Roles_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_TimeZone Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="158.4,41.6"
-          Id="Package\Portal_TimeZone Data Migration\Portal_TimeZone"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="179.2,41.6"
           Id="Package\Portal_TimeZone Data Migration\Portal_TimeZone_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\Portal_TimeZone Data Migration\Portal_TimeZone"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_TimeZone Data Migration.Paths[OLE DB Source Output]"
           TopLeft="258.233327240415,61.8333334504233">
@@ -28991,27 +29282,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_TimeZone Data Migration\Portal_TimeZone_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_ToDoAssigneeHistory Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="212,41.6"
-          Id="Package\Portal_ToDoAssigneeHistory Data Migration\Portal_ToDoAssigneeHistory"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="233.6,41.6"
           Id="Package\Portal_ToDoAssigneeHistory Data Migration\Portal_ToDoAssigneeHistory_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="212,41.6"
+          Id="Package\Portal_ToDoAssigneeHistory Data Migration\Portal_ToDoAssigneeHistory"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_ToDoAssigneeHistory Data Migration.Paths[OLE DB Source Output]"
           TopLeft="285.233327240415,61.8333334504233">
@@ -29031,27 +29333,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_ToDoAssigneeHistory Data Migration\Portal_ToDoAssigneeHistory_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_UserClientContact Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="196,41.6"
-          Id="Package\Portal_UserClientContact Data Migration\Portal_UserClientContact"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="217.6,41.6"
           Id="Package\Portal_UserClientContact Data Migration\Portal_UserClientContact_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="196,41.6"
+          Id="Package\Portal_UserClientContact Data Migration\Portal_UserClientContact"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_UserClientContact Data Migration.Paths[OLE DB Source Output]"
           TopLeft="277.233327240415,61.8333334504233">
@@ -29071,27 +29384,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_UserClientContact Data Migration\Portal_UserClientContact_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Portal_UserSignatures Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="183.2,41.6"
-          Id="Package\Portal_UserSignatures Data Migration\Portal_UserSignatures"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="204.8,41.6"
           Id="Package\Portal_UserSignatures Data Migration\Portal_UserSignatures_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\Portal_UserSignatures Data Migration\Portal_UserSignatures"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Portal_UserSignatures Data Migration.Paths[OLE DB Source Output]"
           TopLeft="270.833327240415,61.8333334504233">
@@ -29111,27 +29435,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Portal_UserSignatures Data Migration\Portal_UserSignatures_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Pricing_Answers Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="156,41.6"
-          Id="Package\Pricing_Answers Data Migration\Pricing_Answers"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="177.6,41.6"
           Id="Package\Pricing_Answers Data Migration\Pricing_Answers_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Pricing_Answers Data Migration\Pricing_Answers"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Pricing_Answers Data Migration.Paths[OLE DB Source Output]"
           TopLeft="257.233327240415,61.8333334504233">
@@ -29151,27 +29486,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Pricing_Answers Data Migration\Pricing_Answers_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Pricing_Schedule Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="159.2,41.6"
-          Id="Package\Pricing_Schedule Data Migration\Pricing_Schedule"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="180.8,41.6"
           Id="Package\Pricing_Schedule Data Migration\Pricing_Schedule_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Pricing_Schedule Data Migration\Pricing_Schedule"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\Pricing_Schedule Data Migration.Paths[OLE DB Source Output]"
           TopLeft="258.833327240415,61.8333334504233">
@@ -29191,19 +29537,30 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Pricing_Schedule Data Migration\Pricing_Schedule_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\PricingDetails Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="142.4,41.6"
           Id="Package\PricingDetails Data Migration\PricingDetails"
@@ -29231,19 +29588,30 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PricingDetails Data Migration\PricingDetails_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\PricingElements Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="153.6,41.6"
           Id="Package\PricingElements Data Migration\PricingElements"
@@ -29271,27 +29639,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PricingElements Data Migration\PricingElements_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\PricingHeader Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="144.8,41.6"
-          Id="Package\PricingHeader Data Migration\PricingHeader"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="165.6,41.6"
           Id="Package\PricingHeader Data Migration\PricingHeader_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="144.8,41.6"
+          Id="Package\PricingHeader Data Migration\PricingHeader"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\PricingHeader Data Migration.Paths[OLE DB Source Output]"
           TopLeft="251.433327240414,61.8333334504233">
@@ -29311,27 +29690,38 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PricingHeader Data Migration\PricingHeader_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\ProspectPlan Data Migration">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="140,41.6"
-          Id="Package\ProspectPlan Data Migration\ProspectPlan"
-          TopLeft="175.499993244807,20.2333334504233" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="161.6,41.6"
           Id="Package\ProspectPlan Data Migration\ProspectPlan_MP"
           TopLeft="172.166661236022,151.633334256278" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\ProspectPlan Data Migration\ProspectPlan"
+          TopLeft="175.499993244807,20.2333334504233" />
         <EdgeLayout
           Id="Package\ProspectPlan Data Migration.Paths[OLE DB Source Output]"
           TopLeft="249.233327240414,61.8333334504233">
@@ -29351,13 +29741,24 @@ where cm.IsDead=1 and cm.IsDeadDate&lt;'2020-01-01 00:00:00.000')</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ProspectPlan Data Migration\ProspectPlan_MP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
