@@ -1,0 +1,177 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/2/2021 8:58:40 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-1V5A3IQ"
+  DTS:CreatorName="DESKTOP-1V5A3IQ\Admin"
+  DTS:DTSID="{E7DF2418-E9C7-4E02-A99F-DF6797DA12F6}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{33BAD757-8140-4FCB-A36E-272CBD7EFB17}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\BondingCo_Lib"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="BondingCo_Lib"
+      DTS:DTSID="{188a147e-d9be-4e5b-afb3-c127a3e95ffd}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="BondingCo_Lib"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
+          SQLTask:SqlStatementSource="/*BondingCo_Lib Name Mapping*/&#xA;&#xA;DECLARE @ListOfBondingCo TABLE(ID INT IDENTITY(1,1),MP_Name NVARCHAR(100) , PPC_Name NVARCHAR(100))&#xA; &#xA;INSERT INTO @ListOfBondingCo&#xA;VALUES &#xA;('Accord','Acord'),&#xA;('ACORD - Hub International','Acord'),&#xA;('ACORD - Stuckey Ins Assoc Agencies','Acord'),&#xA;('ACORD - The Mahoney Group','Acord'),&#xA;('CBIC Insuracne','CBIC'),&#xA;('CBIC Insurance','CBIC'),&#xA;('Chubb Group','Chubb'),&#xA;('Federal Ins Co (CHUBB)', 'Chubb'),&#xA;('Cincinatti Ins Co','Cincinnati Insurance'),&#xA;('Cincinnati Insurance Company','Cincinnati Insurance'),&#xA;('Cincinnatti Ins Co','Cincinnati Insurance'),&#xA;('CNA  Western Surety Company','CNA Surety'),&#xA;('CNA &amp; Travelers','CNA Surety'),&#xA;('CNA Insurance Companies','CNA Surety'),&#xA;('Colonial Security','Colonial'),&#xA;('Colonial Surety','Colonial'),&#xA;('Colonial Surety Co.','Colonial'),&#xA;('Colonial Surety Company','Colonial'),&#xA;('Colonial Surety Compnay','Colonial'),&#xA;('Contractors Bond','Continental Casualty Company'),&#xA;('Contractors Bonding &amp;amp; Insurance Company (CBIC)','Continental Casualty Company'),&#xA;('Contractors Bonding and Insurance Co.','Continental Casualty Company'),&#xA;('Fidelity','Fidelity Insurance Company'),&#xA;('Great American','Great American Insurance Group'),&#xA;('HARTFORD FIRE','Hartford Fire Insurance Company'),&#xA;('Hartford Fire Ins Co','Hartford Fire Insurance Company'),&#xA;('Hartford Fire Insurance','Hartford Fire Insurance Company'),&#xA;('Hartford Fire Insurance Co','Hartford Fire Insurance Company'),&#xA;('HUB Internaitonal Milne of AZ','HUB International'),&#xA;('Hub International of Arizona','HUB International'),&#xA;('Hub Intl Mountain States Ltd','HUB International'),&#xA;('Ohio Casualty','Ohio Casualty Insurance Company'),&#xA;('Old Republic','Old Republic Surety Company'),&#xA;('Old Republic Ins','Old Republic Surety Company'),&#xA;('Old Republic Insurance','Old Republic Surety Company'),&#xA;('Old Republic Insurance Company','Old Republic Surety Company'),&#xA;('Old Republic Surety Co','Old Republic Surety Company'),&#xA;('One Beacon','OneBeacon Insurance Group, LLC'),&#xA;('Philadelphia Ins. Co.','Philadelphia Indemnity Insurance Company'),&#xA;('Philadelphia Insurance','Philadelphia Indemnity Insurance Company'),&#xA;('Platt River Insurance Co','Platte River Insurance Company'),&#xA;('RLI Insurance','RLI'),&#xA;('RLI Insurance Co','RLI'),&#xA;('RLI Insurance Co.','RLI'),&#xA;('RLI Insurance Company','RLI'),&#xA;('RLI Insureance Company','RLI'),&#xA;('RLI Insurnace Company','RLI'),&#xA;('RLI Surety','RLI'),&#xA;('State Farm Ins','State Farm'),&#xA;('State Farm Fire and Casualty Company','State Farm'),&#xA;('State Farm Insuarance','State Farm'),&#xA;('State Farm Insurance','State Farm'),&#xA;('Statefarm','State Farm'),&#xA;('The Cincinnati Insurance Company','Cincinnati Insurance'),&#xA;('The Hanover','The Hanover Insurance Company'),&#xA;('The Hartford Co.','The Hartford'),&#xA;('Travelers Casualty','Travelers'),&#xA;('Travelers Casualty &amp; Surety','Travelers'),&#xA;('Travelers Casualty &amp; Surety Company of America','Travelers'),&#xA;('Travelers Casualty &amp;amp; Surety of America','Travelers'),&#xA;('Travelers Casualty &amp;amp;amp;amp;amp;amp; Surety of America', 'Travelers'),&#xA;('Travelers Casualty and Surety','Travelers'),&#xA;('Travelers Casualty and Surety Company of America','Travelers'),&#xA;('Travelers Casualty Surety Company of America','Travelers'),&#xA;('Travelers Casulty and Surety Company of America','Travelers'),&#xA;('Travelers Indemnity Company','Travelers'),&#xA;('Travelers Property &amp;amp; Casualty Co','Travelers'),&#xA;('Travelers Property &amp;amp;amp;amp; Casualty Co','Travelers'),&#xA;('Travelers Property &amp;amp;amp;amp;amp;amp; Casualty Co','Travelers'),&#xA;('Western National','Western National Mutual Insurance Company'),&#xA;('Western Surety','Western Surety Company'),&#xA;('Western Surety Co','Western Surety Company'),&#xA;('Western Surety Co.','Western Surety Company'),&#xA;('Westfield Insurance Co.','Westfield Insurance')&#xA;&#xA;DECLARE @LoopCounter INT , @MaxId INT, @MP_Name NVARCHAR(100), @PPC_Name NVARCHAR(100), @MP_ID INT, @PPC_ID INT;&#xA;SELECT @LoopCounter = MIN(ID),&#xA;&#x9;&#x9;@MaxId = MAX(ID) &#xA;FROM @ListOfBondingCo&#xA;WHILE ( @LoopCounter IS NOT NULL&#xA;        AND  @LoopCounter &lt;= @MaxId)&#xA;BEGIN&#xA;PRINT @LOOPCOUNTER&#xA;&#xA;SET @MP_Name = (SELECT TOP 1 MP_Name FROM @ListOfBondingCo WHERE ID = @LoopCounter);&#xA;SET @PPC_Name = (SELECT TOP 1 PPC_Name FROM @ListOfBondingCo WHERE ID = @LoopCounter);&#xA;SET @MP_ID = (SELECT TOP 1 BondingCo_ID FROM [dbo].[BondingCo_Lib] WHERE TRIM(BondingCo_Text) = TRIM(@MP_Name));&#xA;SET @PPC_ID = (SELECT TOP 1 BondingCo_ID FROM [dbo].[BondingCo_Lib] WHERE TRIM(BondingCo_Text) =  TRIM(@PPC_Name));&#xA;&#xA;IF(@MP_ID IS NOT NULL AND @PPC_ID IS NOT NULL)&#xA;BEGIN&#xA;UPDATE [dbo].[BondingCo_Lib_ID_Mapping]&#xA;SET New_ID = @PPC_ID&#xA;FROM [dbo].[BondingCo_Lib_ID_Mapping]&#xA;WHERE New_ID = @MP_ID&#xA;&#xA;DELETE FROM [BondingCo_Lib]&#xA;WHERE BondingCo_ID=@MP_ID&#xA;END&#xA;ELSE&#xA;BEGIN&#xA;PRINT CONCAT('DATA NOT EXIST TO MAP: ', @MP_Name)&#xA;END&#xA;SELECT @LoopCounter  = MIN(ID) &#xA;   FROM @ListOfBondingCo  WHERE ID &gt; @LoopCounter&#xA;END&#xA;&#xA;&#xA;DELETE&#xA;FROM [BondingCo_Lib]&#xA;WHERE BondingCo_Text IN ('64654')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\InvestmentPlatforms_Lib_Cleanup"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="InvestmentPlatforms_Lib_Cleanup"
+      DTS:DTSID="{80010c9d-bdf2-44c8-8807-bcd599ae5553}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="InvestmentPlatforms_Lib_Cleanup"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
+          SQLTask:SqlStatementSource="/*InvestmentPlatforms_Lib Name Mapping*/&#xA;DECLARE @ListOfStatementFrom TABLE(ID INT IDENTITY(1,1),MP_Name NVARCHAR(100) , PPC_Name NVARCHAR(100))&#xA; &#xA;INSERT INTO @ListOfStatementFrom&#xA;VALUES &#xA;('Ameriprise Financial','Ameriprise'),&#xA;('AssetMark Trust Co','Assetmark'),&#xA;('BBVA Compass','BVVA'),&#xA;('E*Trade Financial','Etrade'),&#xA;('Fidelity Investments','Fidelity'),&#xA;('Jackson Nat''l Life Ins Co.', 'Jackson National Life Insurance'),&#xA;('RBC Wealth Management','RBC'),&#xA;('UBS Financial Services Inc.','UBS Financial'),&#xA;('T Rowe Price','T. Rowe Price'),&#xA;('USAA Investment Management Co.','USAA'),&#xA;('RK-American Funds','American Funds'),&#xA;('RK-American Funds Plan Premier','American Funds'),&#xA;('RK-Ameritas','Ameritas'),&#xA;('RK-Ascensus','Ascensus'),&#xA;('RK-ASPire (formerly 401kasp)','Aspire'),&#xA;('RK-Employee Fiduciary','Employee Fiduciary, LLC'),&#xA;('RK-First Mercantile','First Mercantile'),&#xA;('RK-John Hancock','John Hancock'),&#xA;('RK-Lincoln Financial','Lincoln Financial'),&#xA;('RK-Mass Mutual','Mass Mutual'),&#xA;('RK-Nationwide','Nationwide'),&#xA;('RK-Principal','Principal Financial'),&#xA;('RK-T. Rowe Price','T. Rowe Price'),&#xA;('RK-Transamerica','Transamerica'),&#xA;('RK-Voya','Voya')&#xA;&#xA;DECLARE @LoopCounter INT , @MaxId INT, @MP_Name NVARCHAR(100), @PPC_Name NVARCHAR(100), @MP_ID INT, @PPC_ID INT;&#xA;SELECT @LoopCounter = MIN(ID),&#xA;&#x9;&#x9;@MaxId = MAX(ID) &#xA;FROM @ListOfStatementFrom&#xA;WHILE ( @LoopCounter IS NOT NULL&#xA;        AND  @LoopCounter &lt;= @MaxId)&#xA;BEGIN&#xA;PRINT @LOOPCOUNTER&#xA;&#xA;SET @MP_Name = (SELECT TOP 1 MP_Name FROM @ListOfStatementFrom WHERE ID = @LoopCounter);&#xA;SET @PPC_Name = (SELECT TOP 1 PPC_Name FROM @ListOfStatementFrom WHERE ID = @LoopCounter);&#xA;SET @MP_ID = (SELECT TOP 1 InvestmentPlatform_ID FROM [dbo].[InvestmentPlatforms_Lib] WHERE TRIM(InvestmentPlatform_Text) = TRIM(@MP_Name));&#xA;SET @PPC_ID = (SELECT TOP 1 InvestmentPlatform_ID FROM [dbo].[InvestmentPlatforms_Lib] WHERE TRIM(InvestmentPlatform_Text) =  TRIM(@PPC_Name));&#xA;&#xA;IF(@MP_ID IS NOT NULL AND @PPC_ID IS NOT NULL)&#xA;BEGIN&#xA;UPDATE [dbo].[PayrollProvider_ID_Mapping]&#xA;SET New_ID = @PPC_ID&#xA;FROM [dbo].[PayrollProvider_ID_Mapping]&#xA;WHERE New_ID = @MP_ID&#xA;&#xA;DELETE FROM [InvestmentPlatforms_Lib]&#xA;WHERE InvestmentPlatform_ID=@MP_ID&#xA;END&#xA;ELSE&#xA;BEGIN&#xA;PRINT CONCAT('DATA NOT EXIST TO MAP: ', @MP_Name)&#xA;END&#xA;SELECT @LoopCounter  = MIN(ID) &#xA;   FROM @ListOfStatementFrom  WHERE ID &gt; @LoopCounter&#xA;END&#xA;&#xA;UPDATE [InvestmentPlatforms_Lib]&#xA;SET InvestmentPlatform_Text='ExpertPlan'&#xA;FROM [InvestmentPlatforms_Lib]&#xA;WHERE InvestmentPlatform_Text='RK-ExpertPlan'&#xA;&#xA;UPDATE [InvestmentPlatforms_Lib]&#xA;SET InvestmentPlatform_Text='Great West'&#xA;FROM [InvestmentPlatforms_Lib]&#xA;WHERE InvestmentPlatform_Text='RK-Great-West'&#xA;&#xA;UPDATE [InvestmentPlatforms_Lib]&#xA;SET InvestmentPlatform_Text='Guardian'&#xA;FROM [InvestmentPlatforms_Lib]&#xA;WHERE InvestmentPlatform_Text='RK-Guardian'&#xA;&#xA;UPDATE [InvestmentPlatforms_Lib]&#xA;SET InvestmentPlatform_Text='July Services'&#xA;FROM [InvestmentPlatforms_Lib]&#xA;WHERE InvestmentPlatform_Text='RK-July Services'&#xA;&#xA;UPDATE [InvestmentPlatforms_Lib]&#xA;SET InvestmentPlatform_Text='Paychex'&#xA;FROM [InvestmentPlatforms_Lib]&#xA;WHERE InvestmentPlatform_Text='RK-Paychex'&#xA;&#xA;UPDATE [InvestmentPlatforms_Lib]&#xA;SET InvestmentPlatform_Text='T Bank'&#xA;FROM [InvestmentPlatforms_Lib]&#xA;WHERE InvestmentPlatform_Text='RK-T Bank'&#xA;&#xA;UPDATE [InvestmentPlatforms_Lib]&#xA;SET InvestmentPlatform_Text='Ubiquity'&#xA;FROM [InvestmentPlatforms_Lib]&#xA;WHERE InvestmentPlatform_Text='RK-Ubiquity'&#xA;&#xA;UPDATE [InvestmentPlatforms_Lib]&#xA;SET InvestmentPlatform_Text='WESPAC'&#xA;FROM [InvestmentPlatforms_Lib]&#xA;WHERE InvestmentPlatform_Text='RK-WESPAC'&#xA;&#xA;DELETE&#xA;FROM [InvestmentPlatforms_Lib]&#xA;WHERE InvestmentPlatform_Text='Test'&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\PayrollProvider_Cleanup"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="PayrollProvider_Cleanup"
+      DTS:DTSID="{1ff36caf-9569-4816-9244-eb63d88c41a7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="PayrollProvider_Cleanup"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
+          SQLTask:SqlStatementSource="/*Payroll Name Mapping*/&#xA;DECLARE @ListOfPayroll TABLE(ID INT IDENTITY(1,1),MP_Name NVARCHAR(100) , PPC_Name NVARCHAR(100))&#xA; &#xA;INSERT INTO @ListOfPayroll&#xA;VALUES &#xA;('ADP','ADP, LLC')  ,&#xA;('Advantage Payroll','Advantage Payroll Services - PAYCHEX') ,&#xA;('CBR- Creative Business Resources','CBR - Creative Business Resources'),&#xA;('Inhouse','In House'),&#xA;('In-House','In House'),&#xA;('Heartland', 'Heartland Payroll'),&#xA;('Intuit/Quickbooks','Intuit Payroll'),&#xA;('Ledgers Etc','Ledgers Etc.'),&#xA;('Magellan HCM','Magellan')&#xA;&#xA;DECLARE @LoopCounter INT , @MaxId INT, @MP_Name NVARCHAR(100), @PPC_Name NVARCHAR(100), @MP_ID INT, @PPC_ID INT;&#xA;SELECT @LoopCounter = MIN(ID),&#xA;&#x9;&#x9;@MaxId = MAX(ID) &#xA;FROM @ListOfPayroll&#xA;WHILE ( @LoopCounter IS NOT NULL&#xA;        AND  @LoopCounter &lt;= @MaxId)&#xA;BEGIN&#xA;PRINT @LOOPCOUNTER&#xA;&#xA;SET @MP_Name = (SELECT TOP 1 MP_Name FROM @ListOfPayroll WHERE ID = @LoopCounter);&#xA;SET @PPC_Name = (SELECT TOP 1 PPC_Name FROM @ListOfPayroll WHERE ID = @LoopCounter);&#xA;SET @MP_ID = (SELECT TOP 1 PayrollProvider_ID FROM [dbo].[PayrollProvider] WHERE TRIM(PayrollProvider_Text) = TRIM(@MP_Name));&#xA;SET @PPC_ID = (SELECT TOP 1 PayrollProvider_ID FROM [dbo].[PayrollProvider] WHERE TRIM(PayrollProvider_Text) =  TRIM(@PPC_Name));&#xA;&#xA;IF(@MP_ID IS NOT NULL AND @PPC_ID IS NOT NULL)&#xA;BEGIN&#xA;UPDATE [dbo].[PayrollProvider_ID_Mapping]&#xA;SET New_ID = @PPC_ID&#xA;FROM [dbo].[PayrollProvider_ID_Mapping]&#xA;WHERE New_ID = @MP_ID&#xA;&#xA;DELETE FROM [PayrollProvider]&#xA;WHERE PayrollProvider_ID=@MP_ID&#xA;END&#xA;ELSE&#xA;BEGIN&#xA;PRINT CONCAT('DATA NOT EXIST TO MAP: ', @MP_Name)&#xA;END&#xA;SELECT @LoopCounter  = MIN(ID) &#xA;   FROM @ListOfPayroll  WHERE ID &gt; @LoopCounter&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Portal_DocMaintainedBy_Cleanup"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Portal_DocMaintainedBy_Cleanup"
+      DTS:DTSID="{7b94645a-2f6e-41bf-9ed8-44dde62aba4c}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Portal_DocMaintainedBy_Cleanup"
+      DTS:ThreadHint="6">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
+          SQLTask:SqlStatementSource="/*Portal_DocMaintainedBy Name Mapping*/&#xA;&#xA;DECLARE @ListOfDocMaintainedBy TABLE(ID INT IDENTITY(1,1),MP_Name NVARCHAR(100) , PPC_Name NVARCHAR(100))&#xA; &#xA;INSERT INTO @ListOfDocMaintainedBy&#xA;VALUES &#xA;('Charles Schwab &amp; Co. Inc.','Charles Schwab')&#xA;&#xA;DECLARE @LoopCounter INT , @MaxId INT, @MP_Name NVARCHAR(100), @PPC_Name NVARCHAR(100), @MP_ID INT, @PPC_ID INT;&#xA;SELECT @LoopCounter = MIN(ID),&#xA;&#x9;&#x9;@MaxId = MAX(ID) &#xA;FROM @ListOfDocMaintainedBy&#xA;WHILE ( @LoopCounter IS NOT NULL&#xA;        AND  @LoopCounter &lt;= @MaxId)&#xA;BEGIN&#xA;PRINT @LOOPCOUNTER&#xA;&#xA;SET @MP_Name = (SELECT TOP 1 MP_Name FROM @ListOfDocMaintainedBy WHERE ID = @LoopCounter);&#xA;SET @PPC_Name = (SELECT TOP 1 PPC_Name FROM @ListOfDocMaintainedBy WHERE ID = @LoopCounter);&#xA;SET @MP_ID = (SELECT TOP 1 DocMaintainedById FROM [dbo].[Portal_DocMaintainedBy] WHERE TRIM(DocMaintainedByName) = TRIM(@MP_Name));&#xA;SET @PPC_ID = (SELECT TOP 1 DocMaintainedById FROM [dbo].[Portal_DocMaintainedBy] WHERE TRIM(DocMaintainedByName) =  TRIM(@PPC_Name));&#xA;&#xA;IF(@MP_ID IS NOT NULL AND @PPC_ID IS NOT NULL)&#xA;BEGIN&#xA;UPDATE [dbo].[Portal_DocMaintainedBy_ID_Mapping]&#xA;SET New_ID = @PPC_ID&#xA;FROM [dbo].[Portal_DocMaintainedBy_ID_Mapping]&#xA;WHERE New_ID = @MP_ID&#xA;&#xA;DELETE FROM [Portal_DocMaintainedBy]&#xA;WHERE DocMaintainedById=@MP_ID&#xA;END&#xA;ELSE&#xA;BEGIN&#xA;PRINT CONCAT('DATA NOT EXIST TO MAP: ', @MP_Name)&#xA;END&#xA;SELECT @LoopCounter  = MIN(ID) &#xA;   FROM @ListOfDocMaintainedBy  WHERE ID &gt; @LoopCounter&#xA;END&#xA;&#xA;&#xA;DELETE&#xA;FROM [Portal_DocMaintainedBy]&#xA;WHERE DocMaintainedByName IN ('CDNU - Client Does Not Use an Advisor','test', 'Test document value 23')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Portal_NewTPAFirm_Cleanup"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Portal_NewTPAFirm_Cleanup"
+      DTS:DTSID="{89132543-4803-4795-a72b-7b3cb3b8fad4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Portal_NewTPAFirm_Cleanup"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
+          SQLTask:SqlStatementSource="/*Portal_NewTPAFirm Name Mapping*/&#xA;&#xA;DECLARE @ListOfNewTPAFirm TABLE(ID INT IDENTITY(1,1),MP_Name NVARCHAR(100) , PPC_Name NVARCHAR(100))&#xA; &#xA;INSERT INTO @ListOfNewTPAFirm&#xA;VALUES &#xA;('ADP Retirement Services','ADP'),&#xA;('Mercer Advisros','Mercer'),&#xA;('Sunwest Actuarial Services','Sunwest Pensions'),&#xA;('Sunwest Actuarial Systems','Sunwest Pensions'),&#xA;('unknown','Not Specified'),&#xA;('unknown - not disclosed','Not Specified')&#xA;&#xA;DECLARE @LoopCounter INT , @MaxId INT, @MP_Name NVARCHAR(100), @PPC_Name NVARCHAR(100), @MP_ID INT, @PPC_ID INT;&#xA;SELECT @LoopCounter = MIN(ID),&#xA;&#x9;&#x9;@MaxId = MAX(ID) &#xA;FROM @ListOfNewTPAFirm&#xA;WHILE ( @LoopCounter IS NOT NULL&#xA;        AND  @LoopCounter &lt;= @MaxId)&#xA;BEGIN&#xA;PRINT @LOOPCOUNTER&#xA;&#xA;SET @MP_Name = (SELECT TOP 1 MP_Name FROM @ListOfNewTPAFirm WHERE ID = @LoopCounter);&#xA;SET @PPC_Name = (SELECT TOP 1 PPC_Name FROM @ListOfNewTPAFirm WHERE ID = @LoopCounter);&#xA;SET @MP_ID = (SELECT TOP 1 Id FROM [dbo].[Portal_NewTPAFirm] WHERE TRIM(TPAFirmText) = TRIM(@MP_Name));&#xA;SET @PPC_ID = (SELECT TOP 1 Id FROM [dbo].[Portal_NewTPAFirm] WHERE TRIM(TPAFirmText) =  TRIM(@PPC_Name));&#xA;&#xA;IF(@MP_ID IS NOT NULL AND @PPC_ID IS NOT NULL)&#xA;BEGIN&#xA;UPDATE [dbo].[Portal_NewTPAFirm_ID_Mapping]&#xA;SET New_ID = @PPC_ID&#xA;FROM [dbo].[Portal_NewTPAFirm_ID_Mapping]&#xA;WHERE New_ID = @MP_ID&#xA;&#xA;DELETE FROM [Portal_NewTPAFirm]&#xA;WHERE Id=@MP_ID&#xA;END&#xA;ELSE&#xA;BEGIN&#xA;PRINT CONCAT('DATA NOT EXIST TO MAP: ', @MP_Name)&#xA;END&#xA;SELECT @LoopCounter  = MIN(ID) &#xA;   FROM @ListOfNewTPAFirm  WHERE ID &gt; @LoopCounter&#xA;END&#xA;&#xA;&#xA;DELETE&#xA;FROM [Portal_NewTPAFirm]&#xA;WHERE TPAFirmText IN ('2012','2121','dfdsf', 'n/a', 'N/A - Plan Term', 'Plan Term','Plan termination', 'sdfsd', 'Test Already','werwer','ytt')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Portal_ReasonForDeparture_Cleanup"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Portal_ReasonForDeparture_Cleanup"
+      DTS:DTSID="{0f1a288d-f67b-440e-a6c9-f14093d32a80}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Portal_ReasonForDeparture_Cleanup"
+      DTS:ThreadHint="5">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
+          SQLTask:SqlStatementSource="/*Portal_ReasonForDeparture Name Mapping*/&#xA;DECLARE @ListOfROD TABLE(ID INT IDENTITY(1,1),MP_Name NVARCHAR(100) , PPC_Name NVARCHAR(100))&#xA; &#xA;INSERT INTO @ListOfROD&#xA;VALUES &#xA;('Fired by us','PPC Fired Client')  ,&#xA;('Left for new TPA','Moved to new TPA') ,&#xA;('Terminated Plan','Plan Termination')&#xA;&#xA;DECLARE @LoopCounter INT , @MaxId INT, @MP_Name NVARCHAR(100), @PPC_Name NVARCHAR(100), @MP_ID INT, @PPC_ID INT;&#xA;SELECT @LoopCounter = MIN(ID),&#xA;&#x9;&#x9;@MaxId = MAX(ID) &#xA;FROM @ListOfROD&#xA;WHILE ( @LoopCounter IS NOT NULL&#xA;        AND  @LoopCounter &lt;= @MaxId)&#xA;BEGIN&#xA;PRINT @LOOPCOUNTER&#xA;&#xA;SET @MP_Name = (SELECT TOP 1 MP_Name FROM @ListOfROD WHERE ID = @LoopCounter);&#xA;SET @PPC_Name = (SELECT TOP 1 PPC_Name FROM @ListOfROD WHERE ID = @LoopCounter);&#xA;SET @MP_ID = (SELECT TOP 1 Id FROM [dbo].[Portal_ReasonForDeparture] WHERE TRIM(ReasonForDepartureText) = TRIM(@MP_Name));&#xA;SET @PPC_ID = (SELECT TOP 1 Id FROM [dbo].[Portal_ReasonForDeparture] WHERE TRIM(ReasonForDepartureText) =  TRIM(@PPC_Name));&#xA;&#xA;IF(@MP_ID IS NOT NULL AND @PPC_ID IS NOT NULL)&#xA;BEGIN&#xA;UPDATE [dbo].[Portal_ReasonForDeparture_ID_Mapping]&#xA;SET New_ID = @PPC_ID&#xA;FROM [dbo].[Portal_ReasonForDeparture_ID_Mapping]&#xA;WHERE New_ID = @MP_ID&#xA;&#xA;DELETE FROM [Portal_ReasonForDeparture]&#xA;WHERE Id=@MP_ID&#xA;END&#xA;ELSE&#xA;BEGIN&#xA;PRINT CONCAT('DATA NOT EXIST TO MAP: ', @MP_Name)&#xA;END&#xA;SELECT @LoopCounter  = MIN(ID) &#xA;   FROM @ListOfROD  WHERE ID &gt; @LoopCounter&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Portal_TakeOverFrom_Cleanup"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Portal_TakeOverFrom_Cleanup"
+      DTS:DTSID="{7d05b79e-2b25-49e8-8e76-48372726139c}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Portal_TakeOverFrom_Cleanup"
+      DTS:ThreadHint="4">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
+          SQLTask:SqlStatementSource="/*Portal_TakeOverFrom Name Mapping*/&#xA;&#xA;DECLARE @ListOfTakeOverFrom TABLE(ID INT IDENTITY(1,1),MP_Name NVARCHAR(100) , PPC_Name NVARCHAR(100))&#xA; &#xA;INSERT INTO @ListOfTakeOverFrom&#xA;VALUES &#xA;('Mattews Gold &amp; Kennnedy','MGKS')  ,&#xA;('Matthews Gold Kennedy &amp; Snow','MGKS') ,&#xA;('MKGS','MGKS'),&#xA;('Paycheck','Paychex')&#xA;&#xA;DECLARE @LoopCounter INT , @MaxId INT, @MP_Name NVARCHAR(100), @PPC_Name NVARCHAR(100), @MP_ID INT, @PPC_ID INT;&#xA;SELECT @LoopCounter = MIN(ID),&#xA;&#x9;&#x9;@MaxId = MAX(ID) &#xA;FROM @ListOfTakeOverFrom&#xA;WHILE ( @LoopCounter IS NOT NULL&#xA;        AND  @LoopCounter &lt;= @MaxId)&#xA;BEGIN&#xA;PRINT @LOOPCOUNTER&#xA;&#xA;SET @MP_Name = (SELECT TOP 1 MP_Name FROM @ListOfTakeOverFrom WHERE ID = @LoopCounter);&#xA;SET @PPC_Name = (SELECT TOP 1 PPC_Name FROM @ListOfTakeOverFrom WHERE ID = @LoopCounter);&#xA;SET @MP_ID = (SELECT TOP 1 Id FROM [dbo].[Portal_TakeOverFrom] WHERE TRIM(TakeOverFromText) = TRIM(@MP_Name));&#xA;SET @PPC_ID = (SELECT TOP 1 Id FROM [dbo].[Portal_TakeOverFrom] WHERE TRIM(TakeOverFromText) =  TRIM(@PPC_Name));&#xA;&#xA;IF(@MP_ID IS NOT NULL AND @PPC_ID IS NOT NULL)&#xA;BEGIN&#xA;UPDATE [dbo].[Portal_TakeOverFrom_ID_Mapping]&#xA;SET New_ID = @PPC_ID&#xA;FROM [dbo].[Portal_TakeOverFrom_ID_Mapping]&#xA;WHERE New_ID = @MP_ID&#xA;&#xA;DELETE FROM [Portal_TakeOverFrom]&#xA;WHERE Id=@MP_ID&#xA;END&#xA;ELSE&#xA;BEGIN&#xA;PRINT CONCAT('DATA NOT EXIST TO MAP: ', @MP_Name)&#xA;END&#xA;SELECT @LoopCounter  = MIN(ID) &#xA;   FROM @ListOfTakeOverFrom  WHERE ID &gt; @LoopCounter&#xA;END&#xA;&#xA;&#xA;DELETE&#xA;FROM [Portal_TakeOverFrom]&#xA;WHERE TakeOverFromText IN ('32432','5555')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\BondingCo_Lib"
+          TopLeft="388.33332028654,62.6000000206629" />
+        <NodeLayout
+          Size="258.4,41.6"
+          Id="Package\InvestmentPlatforms_Lib_Cleanup"
+          TopLeft="357.499988178413,166.800000041326" />
+        <NodeLayout
+          Size="193.6,41.6"
+          Id="Package\PayrollProvider_Cleanup"
+          TopLeft="357.499988178413,268.400000041326" />
+        <NodeLayout
+          Size="249.6,41.6"
+          Id="Package\Portal_DocMaintainedBy_Cleanup"
+          TopLeft="357.499988178413,370.000000041326" />
+        <NodeLayout
+          Size="249.6,41.6"
+          Id="Package\Portal_NewTPAFirm_Cleanup"
+          TopLeft="358.333321478632,471.600000041326" />
+        <NodeLayout
+          Size="270.4,41.6"
+          Id="Package\Portal_ReasonForDeparture_Cleanup"
+          TopLeft="336.666655672922,573.200000041326" />
+        <NodeLayout
+          Size="270.4,41.6"
+          Id="Package\Portal_TakeOverFrom_Cleanup"
+          TopLeft="336.666655672922,674.800000041326" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

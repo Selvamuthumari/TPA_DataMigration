@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ILSTRY-LAP-10</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAth34+1pVs0ygo23oPUlhpwAAAAACAAAAAAAQZgAAAAEAACAAAACTqDEqxfEQv4de4OsQYywqA6Wrj9tuGyHK0GSBZhrTHgAAAAAOgAAAAAIAACAAAAAxckMqsLGYliG0vcoqqg0J9CqmcQQiavDaHw4/tqno4pAAAACKVlEvm3TJVsy2byDtehvhBxw2waHGRvn0W2Fe7HSJZxGf3rxrNjGUQIKu1Pb3PCpeFBBLa3knVUiJeVakDITX2Um3v/P3iXXtsRxQbkl4xybCsjVXUb/YIMYXWX2mHUR+tDq3Nk9qHz8XeBvMGROfvkEKsAIetN/qVOgw/YAow7pU0sIUsNQk8uDEbSo+EU5AAAAAakS+nA1cPzA3rOi3dum1j6x4M69YGU1JR4dkTjT83/Ik3EqmaboVx1+xz7CXSKci8wH5HlBBm2dyqygzLhwPDg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAth34+1pVs0ygo23oPUlhpwAAAAACAAAAAAAQZgAAAAEAACAAAADg0cAYq9v42ZHIKwdXYN5EklZjjv9y21xh1brtqiXyCAAAAAAOgAAAAAIAACAAAADX9kTtuVo7zsVtQigukpstQYV7KL9aQs68eArpd+Qgr5AAAADpjXNE82sx3fU2Y40g3nJZ4/TfFCq07GCOyzhx8b4sccr1g+rVK45dgGiP4jkmAv9PaNDz3NRgA7T7/0NKoEcBkNeUHI/fCU9prRLMAWwBnzRyCXyoJjf8eTVsFSqSMGkp0woaY5byeytV+Au1W5o4mvPzec2hep4UjF/PIjacGcm1wTtRALThrK7Aldm5H71AAAAAPrp26d0pt33YvZ0sOQsufHFs4vHfxflNnKBXhuQKwxC2/mtnDxg7U3WXAC90nXmOPjOkMfAonjSORLg0Z4Y2NQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -36,10 +36,10 @@
           <SSIS:Package SSIS:Name="Copy_ChildTables_Data3.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Copy_ChildTables_Data4.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Setup_TempTables.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Run_ParentMigrationScripts.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Package1.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="1_Run_CopyParentData.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="2_Run_CopyChildData.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="3_Run_ParentMigrationScripts.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="4_Run_ParentCleanup.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="guvg1xauot.database.windows.net.TestDB-MyPlans.TpaNav@guvg1xauot.conmgr" />
@@ -447,40 +447,6 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Run_ParentMigrationScripts.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{A321FF2C-F949-442E-9189-120133DB7786}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{BAC472A1-28D7-439C-A3A8-8D042335E4AB}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Package1.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{E7DF2418-E9C7-4E02-A99F-DF6797DA12F6}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{E2BF27C6-3EFF-4132-BEEA-FE159B05984F}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
             <SSIS:PackageMetaData SSIS:Name="1_Run_CopyParentData.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{794805A6-57BA-48A2-8A0C-9A6AEEA1C8E7}</SSIS:Property>
@@ -508,6 +474,40 @@
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{A3D7A286-0C12-4EFE-9CC2-3B251CA88540}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="3_Run_ParentMigrationScripts.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{C18454E0-4C09-4E06-B96F-E7174D3DFC8B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">3_Run_ParentMigrationScripts</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{E89561D6-A394-44CA-B728-E55CDD613626}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="4_Run_ParentCleanup.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{E7DF2418-E9C7-4E02-A99F-DF6797DA12F6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{33BAD757-8140-4FCB-A36E-272CBD7EFB17}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
