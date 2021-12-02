@@ -19,13 +19,6 @@ FROM [dbo].[Plans_MP] bc
 JOIN [dbo].[Client_Master_ID_Mapping] um ON bc.Client_Id = um.Old_ID
 WHERE bc.Client_Id != -1
 
---UPDATE DocType column
-UPDATE [dbo].[Plans_MP]
-SET DocType = um.New_ID
-FROM [dbo].[Plans_MP] bc
-JOIN [dbo].[Doc_Types_ID_Mapping] um ON bc.DocType = um.Old_ID
-WHERE bc.DocType != -1
-
 --UPDATE TakeOverFromId column
 UPDATE [dbo].[Plans_MP]
 SET TakeOverFromId = um.New_ID
