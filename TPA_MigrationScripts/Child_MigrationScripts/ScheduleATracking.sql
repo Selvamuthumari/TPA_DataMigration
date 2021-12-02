@@ -2,6 +2,14 @@
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
+--Get max ID value in table
+DECLARE @MaxIDExist INT = (SELECT MAX(ScheduleATracking_ID) FROM [dbo].[ScheduleATracking]);--353
+
+--Insert @MaxIDExist into respective mapping table
+	SET IDENTITY_INSERT dbo.[ScheduleATracking_ID_Mapping] ON; 
+	INSERT INTO [dbo].[ScheduleATracking_ID_Mapping] (MapId, Old_ID, New_ID)
+	VALUES(-1, @MaxIDExist, -1)
+	SET IDENTITY_INSERT dbo.[ScheduleATracking_ID_Mapping] OFF; 
 
 --UPDATE PlanIndexId column
 UPDATE [dbo].[ScheduleATracking_MP]

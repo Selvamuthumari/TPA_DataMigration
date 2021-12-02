@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-1V5A3IQ"
   DTS:CreatorName="DESKTOP-1V5A3IQ\Admin"
-  DTS:DTSID="{9B125AA5-323B-46BE-83F6-E971E93B44FD}"
+  DTS:DTSID="{794805A6-57BA-48A2-8A0C-9A6AEEA1C8E7}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="16393"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="1_Run_CopyParentData"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{7699F0EC-2BFD-40F3-915A-75ABD3706750}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{A5833A78-F23E-4C61-8547-53DA6EAB9221}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -75,13 +75,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="191.2,41.6"
-          Id="Package\Run Setup_TempTables"
-          TopLeft="245.499990463257,50.5666670248244" />
-        <NodeLayout
           Size="164.8,41.6"
           Id="Package\Run Parent Tables"
           TopLeft="250.499991456668,169.833334400919" />
+        <NodeLayout
+          Size="191.2,41.6"
+          Id="Package\Run Setup_TempTables"
+          TopLeft="245.499990463257,50.5666670248244" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="341.099990463257,92.1666670248244">

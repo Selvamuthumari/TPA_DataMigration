@@ -7,10 +7,6 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=guvg1xauot.database.windows.net;User ID=TpaNav@guvg1xauot;Initial Catalog=TestDB-MyPlans-23Nov;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-      <DTS:Password
-        DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAth34+1pVs0ygo23oPUlhpwAAAAACAAAAAAAQZgAAAAEAACAAAACP5xwB5ixpliheNMsnD78cAIgWGRHobl2wUht952ntiwAAAAAOgAAAAAIAACAAAACgTxykOR5rJliGV04j07TzjcPU3oBrxe9TjQr+GESi1oAAAAAgaOPFmhmIq/kC/RXfSC2t/caBMRStJFtU1qr8QJ8wmPcm4HafKRZ3PNWLnIEzZ+dPRPdkLWZl770KviYO10y/mSxjtOTFou298oNz09JzhcgcUSVIkLB7r7AOp9nZJ/P0btSyEjoCgiNZlEJWSvz7FtKYtz9UfLj89WkF3UF8skAAAAD890fWk7nXsZZCiJzZSfofZvuXgvpE9YbZeJHhOa53bQ66H/YhYeG73WSdRJttvESmXJMBLx0ytmT36gKbg/MX</DTS:Password>
-    </DTS:ConnectionManager>
+      DTS:ConnectionString="Data Source=DESKTOP-1V5A3IQ;Initial Catalog=MyPlans;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

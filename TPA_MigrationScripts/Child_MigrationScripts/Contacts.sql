@@ -43,7 +43,7 @@ WHERE bc.Contact_Method != -1
 UPDATE [dbo].[Contacts_MP]
 SET Advisor_Notes = um.New_ID
 FROM [dbo].[Contacts_MP] bc
-JOIN [dbo].[Contacts_ID_Mapping] um ON bc.Advisor_Notes = um.Old_ID
+JOIN [dbo].[Notes_ID_Mapping] um ON bc.Advisor_Notes = um.Old_ID
 WHERE bc.Advisor_Notes != -1
 
 --Get max ID value in table

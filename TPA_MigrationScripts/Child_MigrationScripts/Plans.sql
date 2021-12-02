@@ -68,6 +68,20 @@ FROM [dbo].[Plans_MP] bc
 JOIN [dbo].[UserID_Mapping] um ON bc.LastDepartureUpdatedByWho=um.[MyPlans_SysUserID]
 WHERE bc.LastDepartureUpdatedByWho != -1
 
+--UPDATE Consultant
+UPDATE [dbo].[Plans_MP]
+SET Consultant = um.[PPC_SysUserID]
+FROM [dbo].[Plans_MP] bc
+JOIN [dbo].[UserID_Mapping] um ON bc.Consultant=um.[MyPlans_SysUserID]
+WHERE bc.Consultant != -1
+
+--UPDATE CSR
+UPDATE [dbo].[Plans_MP]
+SET CSR = um.[PPC_SysUserID]
+FROM [dbo].[Plans_MP] bc
+JOIN [dbo].[UserID_Mapping] um ON bc.CSR=um.[MyPlans_SysUserID]
+WHERE bc.CSR != -1
+
 --UPDATE NewTpaFirmId
 UPDATE [dbo].[Plans_MP]
 SET NewTpaFirmId = um.New_ID
@@ -96,8 +110,7 @@ WHILE ( @LoopCounter IS NOT NULL
 BEGIN
 	PRINT CONCAT('Processing row: ', @LoopCounter)
 	SELECT @OldId = Plans_Index_ID, @ClientID = Client_ID, @Plans_Index_ID = Plans_Index_ID  FROM [dbo].[Plans_MP]  WHERE LoopId = @LoopCounter
-	IF(@OldID != -1 AND (SELECT COUNT(*) FROM Client_Master WHERE Client_ID = @ClientID) > 0
-	 AND (SELECT COUNT(*) FROM Plans WHERE Plans_Index_ID = @Plans_Index_ID) > 0)	
+	IF(@OldID != -1 AND (SELECT COUNT(*) FROM Client_Master WHERE Client_ID = @ClientID) > 0 )	
 	BEGIN
 	INSERT INTO [dbo].[Plans]
 	 OUTPUT Inserted.Plans_Index_ID INTO @IdentityValue

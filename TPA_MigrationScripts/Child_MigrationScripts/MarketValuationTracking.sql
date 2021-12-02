@@ -2,6 +2,14 @@
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
+--Get max ID value in table
+DECLARE @MaxIDExist INT = (SELECT MAX(MarketValuation_ID) FROM [dbo].[MarketValuationTracking]);--353
+
+--Insert @MaxIDExist into respective mapping table
+	SET IDENTITY_INSERT dbo.[MarketValuationTracking_ID_Mapping] ON; 
+	INSERT INTO [dbo].[MarketValuationTracking_ID_Mapping] (MapId, Old_ID, New_ID)
+	VALUES(-1, @MaxIDExist, -1)
+	SET IDENTITY_INSERT dbo.[MarketValuationTracking_ID_Mapping] OFF; 
 
 --UPDATE Plans_Index_ID column
 UPDATE [dbo].[MarketValuationTracking_MP]

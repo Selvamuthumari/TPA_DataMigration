@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ILSTRY-LAP-10</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAth34+1pVs0ygo23oPUlhpwAAAAACAAAAAAAQZgAAAAEAACAAAADvj69JgqkiXVyx7PmiIxoKx0ByNnfyyKKuAKFrremWOwAAAAAOgAAAAAIAACAAAACW84sIYJbSee7KwqVe3ATnjo3AXVx9NIs8EGQiTOhgXZAAAAD/4RN+Co2UfiAfALYOYyoozIt4y//1opJa823NH6T58hLfrp1F9Zme26tmMF4z8cXcAvjDZv0uKowjkzmJhGnEYTWNtGo1h31zPVT65wASTh6XGakOzbt648wm1m2txUnzI01FT/M2CVws+IPIdoWhdm3Wx+KQgquNgafLbGJrsz/fNspnLq/+5sGO1A1x4b1AAAAA8MTaIkLLJcCsEDygfOQ8cmc6McQqf4bvRUrsEhQ9aloRWTdZuWkXIiVH2YtvS4GqKk2rqwCKMHwdxEKnvwdHEg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAth34+1pVs0ygo23oPUlhpwAAAAACAAAAAAAQZgAAAAEAACAAAACTqDEqxfEQv4de4OsQYywqA6Wrj9tuGyHK0GSBZhrTHgAAAAAOgAAAAAIAACAAAAAxckMqsLGYliG0vcoqqg0J9CqmcQQiavDaHw4/tqno4pAAAACKVlEvm3TJVsy2byDtehvhBxw2waHGRvn0W2Fe7HSJZxGf3rxrNjGUQIKu1Pb3PCpeFBBLa3knVUiJeVakDITX2Um3v/P3iXXtsRxQbkl4xybCsjVXUb/YIMYXWX2mHUR+tDq3Nk9qHz8XeBvMGROfvkEKsAIetN/qVOgw/YAow7pU0sIUsNQk8uDEbSo+EU5AAAAAakS+nA1cPzA3rOi3dum1j6x4M69YGU1JR4dkTjT83/Ik3EqmaboVx1+xz7CXSKci8wH5HlBBm2dyqygzLhwPDg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -36,8 +36,10 @@
           <SSIS:Package SSIS:Name="Copy_ChildTables_Data3.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Copy_ChildTables_Data4.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Setup_TempTables.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="RunChild.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="RunParent.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Run_ParentMigrationScripts.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Package1.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="1_Run_CopyParentData.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="2_Run_CopyChildData.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="guvg1xauot.database.windows.net.TestDB-MyPlans.TpaNav@guvg1xauot.conmgr" />
@@ -71,7 +73,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=guvg1xauot.database.windows.net;User ID=TpaNav@guvg1xauot;Initial Catalog=TestDB-MyPlans-23Nov;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=DESKTOP-1V5A3IQ;Initial Catalog=MyPlans;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -131,7 +133,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">TestDB-MyPlans-23Nov</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">MyPlans</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -175,7 +177,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">guvg1xauot.database.windows.net</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">DESKTOP-1V5A3IQ</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -190,7 +192,6 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">TpaNav@guvg1xauot</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -220,7 +221,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=guvg1xauot.database.windows.net;User ID=TpaNav@guvg1xauot;Initial Catalog=TestDB-PPC-23Nov;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=DESKTOP-1V5A3IQ;Initial Catalog=PensionPlanningUSA_DB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -280,7 +281,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">TestDB-PPC-23Nov</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">PensionPlanningUSA_DB</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -324,7 +325,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">guvg1xauot.database.windows.net</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">DESKTOP-1V5A3IQ</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -339,7 +340,6 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">TpaNav@guvg1xauot</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -447,16 +447,16 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="RunChild.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Run_ParentMigrationScripts.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{EC2980D0-AB2E-40A6-A714-7F06F07B59A8}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Package2</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{A321FF2C-F949-442E-9189-120133DB7786}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{90520CB4-1C21-4DF3-BE13-6F9286E279E6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{BAC472A1-28D7-439C-A3A8-8D042335E4AB}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -464,16 +464,50 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="RunParent.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Package1.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{9B125AA5-323B-46BE-83F6-E971E93B44FD}</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{E7DF2418-E9C7-4E02-A99F-DF6797DA12F6}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{7699F0EC-2BFD-40F3-915A-75ABD3706750}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{E2BF27C6-3EFF-4132-BEEA-FE159B05984F}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="1_Run_CopyParentData.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{794805A6-57BA-48A2-8A0C-9A6AEEA1C8E7}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">1_Run_CopyParentData</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{A5833A78-F23E-4C61-8547-53DA6EAB9221}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="2_Run_CopyChildData.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{5C3F8AB2-7C36-4910-AF25-3781E393650C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">2_Run_CopyChildData</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{A3D7A286-0C12-4EFE-9CC2-3B251CA88540}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

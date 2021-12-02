@@ -59,6 +59,12 @@ SET ByWhoClient=UM.New_ID
 FROM [dbo].[Comm_Log_MP] CMP
 JOIN [dbo].[Contacts_ID_Mapping] UM ON CMP.ByWhoClient = UM.Old_ID
 WHERE CMP.IsLastUpdatedByAdvisor = 0
+
+--UPDATE Comm_Log_Category (value as -1 instead of 0)
+UPDATE [dbo].[Comm_Log_MP]
+SET Comm_Log_Category = -1
+FROM [dbo].[Comm_Log_MP]
+WHERE Comm_Log_Category = 0
  
 --Insert records to target table and grab new IDs 
 DECLARE @LoopCounter INT , @MaxId INT, @ClientID INT, @Plan_ID INT, @OldID INT, @NewID INT;

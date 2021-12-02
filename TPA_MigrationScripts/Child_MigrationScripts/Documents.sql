@@ -19,13 +19,6 @@ FROM [dbo].[Documents_MP] bc
 JOIN [dbo].[Client_Master_ID_Mapping] um ON bc.Client_ID = um.Old_ID
 WHERE bc.Client_ID != -1
 
---UPDATE Cluster_ID column
-UPDATE [dbo].[Documents_MP]
-SET Cluster_ID = um.New_ID
-FROM [dbo].[Documents_MP] bc
-JOIN [dbo].[Documents_Cluster_ID_Mapping] um ON bc.Cluster_ID = um.Old_ID
-WHERE bc.Cluster_ID != -1
-
 --UPDATE ByWho column
 UPDATE [dbo].[Documents_MP]
 SET [ByWho] = um.[PPC_SysUserID]
@@ -78,7 +71,7 @@ BEGIN
 
 END
 END
-IF @@TRANCOUNT > 0  
+--IF @@TRANCOUNT > 0  
     COMMIT TRANSACTION;  
 END TRY  
 BEGIN CATCH  

@@ -3,6 +3,16 @@ BEGIN TRANSACTION;
   
 BEGIN TRY  
 
+--Get max ID value in table
+DECLARE @MaxIDExist INT = (SELECT MAX(ID) FROM [dbo].[Portal_InfoGatheredTriggers]);--353
+
+--Insert @MaxIDExist into respective mapping table
+	SET IDENTITY_INSERT dbo.[Portal_InfoGatheredTriggers_ID_Mapping] ON; 
+	INSERT INTO [dbo].[Portal_InfoGatheredTriggers_ID_Mapping] (MapId, Old_ID, New_ID)
+	VALUES(-1, @MaxIDExist, -1)
+	SET IDENTITY_INSERT dbo.[Portal_InfoGatheredTriggers_ID_Mapping] OFF; 
+
+
 --UPDATE Client_Id column
 UPDATE [dbo].[Portal_InfoGatheredTriggers_MP]
 SET [Client_Id] = um.New_ID

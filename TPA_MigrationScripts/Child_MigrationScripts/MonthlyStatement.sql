@@ -3,6 +3,16 @@ BEGIN TRANSACTION;
   
 BEGIN TRY  
 
+--Get max ID value in table
+DECLARE @MaxIDExist INT = (SELECT MAX(MonthlyStatement_ID) FROM [dbo].[MonthlyStatement]);--353
+
+--Insert @MaxIDExist into respective mapping table
+	SET IDENTITY_INSERT dbo.[MonthlyStatement_ID_Mapping] ON; 
+	INSERT INTO [dbo].[MonthlyStatement_ID_Mapping] (MapId, Old_ID, New_ID)
+	VALUES(-1, @MaxIDExist, -1)
+	SET IDENTITY_INSERT dbo.[MonthlyStatement_ID_Mapping] OFF; 
+
+
 --UPDATE ByWho
 UPDATE [dbo].[MonthlyStatement_MP]
 SET ByWho = um.[PPC_SysUserID]

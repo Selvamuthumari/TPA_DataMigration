@@ -42,7 +42,7 @@ WHERE bc.Plan_Index_Id != -1
 
 --UPDATE Comm_Log_Id column
 UPDATE [dbo].[AdHocTodo_MP]
-SET Plan_Index_Id = um.New_ID
+SET Comm_Log_Id = um.New_ID
 FROM [dbo].[AdHocTodo_MP] bc
 JOIN [dbo].[Comm_Log_ID_Mapping] um ON bc.Comm_Log_Id = um.Old_ID
 WHERE bc.Comm_Log_Id != -1

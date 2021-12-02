@@ -14,11 +14,11 @@ DECLARE @MaxIDExist INT = (SELECT MAX(Id) FROM [dbo].PortalWorkflow_ToDo);--353
 
 ----UPDATE TaskId column
 --Fails: Cannot insert the value NULL into column 'TaskId', table 'TestDB-PPC-23Nov.dbo.PortalWorkflow_ToDo_MP'; column does not allow nulls. UPDATE fails.
---UPDATE [dbo].[PortalWorkflow_ToDo_MP]
---SET TaskId = um.New_ID
---FROM [dbo].[PortalWorkflow_ToDo_MP] bc
---JOIN [dbo].[PortalWorkflow_TasksLibrary_ID_Mapping] um ON bc.TaskId=um.Old_ID
---WHERE bc.TaskId != -1 
+UPDATE [dbo].[PortalWorkflow_ToDo_MP]
+SET TaskId = um.New_ID
+FROM [dbo].[PortalWorkflow_ToDo_MP] bc
+JOIN [dbo].[PortalWorkflow_TasksLibrary_ID_Mapping] um ON bc.TaskId=um.Old_ID
+WHERE bc.TaskId != -1 AND um.New_ID IS NOT NULL
 
 --UPDATE WorkflowId column
 UPDATE [dbo].[PortalWorkflow_ToDo_MP]
