@@ -65,20 +65,16 @@ AND CMP.Contact_ID > (SELECT Old_ID FROM Contacts_ID_Mapping WHERE MapId=-1)
 /*Advisor --> ByWho_Client*/
 --UPDATE [dbo].[Advisor]
 --SET ByWho_Client=UM.New_ID
-SELECT *
-FROM [dbo].[Advisor] AMP
-JOIN [dbo].[Advisor_ID_Mapping] UM ON AMP.ByWho_Client = UM.Old_ID
-WHERE AMP.IsLastUpdatedByAdvisor = 1
-AND AMP.Advisor_ID > (SELECT Old_ID FROM Advisor_ID_Mapping WHERE MapId=-1)
+--FROM [dbo].[Advisor] AMP
+--JOIN [dbo].[Advisor_ID_Mapping] UM ON AMP.ByWho_Client = UM.Old_ID
+--WHERE AMP.Advisor_ID > (SELECT Old_ID FROM Advisor_ID_Mapping WHERE MapId=-1)
 
 
 --UPDATE [dbo].[Advisor]
 --SET ByWho_Client=UM.New_ID
-SELECT *
-FROM [dbo].[Advisor] AMP
-JOIN [dbo].[Contacts_ID_Mapping] UM ON AMP.ByWho_Client = UM.Old_ID
-WHERE AMP.IsLastUpdatedByAdvisor = 0 
-AND AMP.Advisor_ID > (SELECT Old_ID FROM Advisor_ID_Mapping WHERE MapId=-1)
+--FROM [dbo].[Advisor] AMP
+--JOIN [dbo].[Contacts_ID_Mapping] UM ON AMP.ByWho_Client = UM.Old_ID
+--WHERE AMP.Advisor_ID > (SELECT Old_ID FROM Advisor_ID_Mapping WHERE MapId=-1)
 
 /*Advisor_Client_Link --> ByWho_Client*/
 UPDATE [dbo].[Advisor_Client_Link]
