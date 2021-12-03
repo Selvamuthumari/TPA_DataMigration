@@ -1,87 +1,104 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="12/2/2021 11:54:40 PM"
+  DTS:CreationDate="12/3/2021 12:16:23 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-1V5A3IQ"
   DTS:CreatorName="DESKTOP-1V5A3IQ\Admin"
-  DTS:DTSID="{26B4E091-206E-4A21-B938-BD1EFAEF6770}"
+  DTS:DTSID="{3A2703F0-2A1C-446C-A6B7-C6CF69BF11F2}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="16393"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{B99CD8F4-5173-4898-B97F-0E57DFC0018D}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{19E848AF-66AD-4279-8377-BF0645AB56E6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Migrate_ChildTables_Data1"
+      DTS:refId="Package\Package_1_Run"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{e3d92049-b458-4a22-a2f8-78623458a22f}"
+      DTS:DTSID="{96A0B2EF-F537-4CCB-9CC7-F15AC85BDEC1}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Migrate_ChildTables_Data1"
+      DTS:ObjectName="Package_1_Run"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>Migrate_ChildTables_Data1.dtsx</PackageName>
+          <PackageName>1_Run_CopyParentData.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Migrate_ChildTables_Data2"
+      DTS:refId="Package\Package_2_Run"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{6a1a89ce-c3c8-428f-9a69-41c53835ae85}"
+      DTS:DTSID="{d751ab26-e7b6-4af1-a240-d5ee220a5a81}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Migrate_ChildTables_Data2"
+      DTS:ObjectName="Package_2_Run"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>Migrate_ChildTables_Data2.dtsx</PackageName>
+          <PackageName>2_Run_CopyChildData.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Migrate_ChildTables_Data3"
+      DTS:refId="Package\Package_3_Run"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{6ebed3df-3add-4ad2-b88b-04ef0743cfe3}"
+      DTS:DTSID="{0d1712f8-4419-45ea-855e-f4eb12eaeeb8}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Migrate_ChildTables_Data3"
+      DTS:ObjectName="Package_3_Run"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>Migrate_ChildTables_Data3.dtsx</PackageName>
+          <PackageName>3_Run_ParentMigrationScripts.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Migrate_ChildTables_Data4"
+      DTS:refId="Package\Package_4_Run"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{02ff50fc-8b5f-4d8e-b109-1de8969173a3}"
+      DTS:DTSID="{6b47c7d1-2b78-4b45-83bb-b308ba0b575e}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Migrate_ChildTables_Data4"
+      DTS:ObjectName="Package_4_Run"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>Migrate_ChildTables_Data4.dtsx</PackageName>
+          <PackageName>4_Run_ParentCleanup.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Package_5_Run"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{5d398e29-e633-472b-82c6-2c4dd6e22cc1}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Package_5_Run"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>5_Run_ChildMigrationScripts.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -90,27 +107,35 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{94B3BB2F-5935-400F-9280-F85BE003311F}"
-      DTS:From="Package\Migrate_ChildTables_Data1"
+      DTS:DTSID="{6314D357-3DA0-4A27-99C2-7F14A2459ACF}"
+      DTS:From="Package\Package_1_Run"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Migrate_ChildTables_Data2" />
+      DTS:To="Package\Package_2_Run" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{3126D63A-2626-40A1-B0A8-DC4F900A656A}"
-      DTS:From="Package\Migrate_ChildTables_Data2"
+      DTS:DTSID="{E0E6AFB4-912A-481A-B4A2-B3F4ED349E03}"
+      DTS:From="Package\Package_2_Run"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\Migrate_ChildTables_Data3" />
+      DTS:To="Package\Package_3_Run" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{5EEA9CAB-854B-4EF4-820A-FEE82F161B2A}"
-      DTS:From="Package\Migrate_ChildTables_Data3"
+      DTS:DTSID="{1DB3C650-AF38-4379-A578-2314B3D4ADB3}"
+      DTS:From="Package\Package_3_Run"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
-      DTS:To="Package\Migrate_ChildTables_Data4" />
+      DTS:To="Package\Package_4_Run" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{D1690FEE-0D6B-43B5-9D6F-68E7A8926F8F}"
+      DTS:From="Package\Package_4_Run"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Package_5_Run" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -123,22 +148,52 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="207.2,41.6"
-          Id="Package\Migrate_ChildTables_Data2"
-          TopLeft="313.833321081268,186.833333966997" />
+          Size="155.2,41.6"
+          Id="Package\Package_1_Run"
+          TopLeft="392.999984602134,78.3000005785624" />
         <NodeLayout
-          Size="207.2,41.6"
-          Id="Package\Migrate_ChildTables_Data3"
-          TopLeft="313.833321081268,288.433333966997" />
+          Size="155.2,41.6"
+          Id="Package\Package_2_Run"
+          TopLeft="392.999984602134,179.900000578562" />
         <NodeLayout
-          Size="207.2,41.6"
-          Id="Package\Migrate_ChildTables_Data4"
-          TopLeft="313.833321081268,390.033333966997" />
+          Size="155.2,41.6"
+          Id="Package\Package_3_Run"
+          TopLeft="392.999984602134,281.500000578562" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Package_4_Run"
+          TopLeft="392.999984602134,383.100000578562" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Package_5_Run"
+          TopLeft="392.999984602134,484.700000578562" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="470.599984602134,119.900000578562">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="417.433321081268,228.433333966997">
+          TopLeft="470.599984602134,221.500000578562">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -160,7 +215,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="417.433321081268,330.033333966997">
+          TopLeft="470.599984602134,323.100000578562">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -180,24 +235,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="207.2,41.6"
-          Id="Package\Migrate_ChildTables_Data1"
-          TopLeft="312.999987781048,43.5666637394163" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="417.016654431158,85.1666637394163">
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="470.599984602134,424.700000578562">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,101.666670227581"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,94.1666702275807">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,94.1666702275807" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

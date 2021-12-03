@@ -60,8 +60,30 @@ FROM [dbo].[MarketValuationTracking_MP] bc
 JOIN [dbo].[UserID_Mapping] um ON bc.AssetConfirmedByWho=um.[MyPlans_SysUserID]
 WHERE bc.AssetConfirmedByWho != -1
 
+--Insert records to target table and grab new IDs 
+DECLARE @LoopCounter INT , @MaxId INT, @AssetTrackingID INT, @Plans_Index_ID INT, @OldID INT, @NewID INT;
+DECLARE @IdentityValue AS TABLE(ID INT); 
+SELECT @LoopCounter = MIN(LoopId),
+		@MaxId = MAX(LoopId) 
+FROM [dbo].[MarketValuationTracking_MP]
+
+IF ((SELECT COUNT(*) FROM [dbo].[MarketValuationTracking_MP]) > 0)
+BEGIN
+WHILE ( @LoopCounter IS NOT NULL
+        AND  @LoopCounter <= @MaxId)
+BEGIN
+	PRINT CONCAT('Processing row: ', @LoopCounter)
+	SELECT @OldID = MarketValuation_ID, 
+	@AssetTrackingID = AssetTracking_ID, 
+	@Plans_Index_ID = Plans_Index_ID  
+	FROM [dbo].[MarketValuationTracking_MP]  WHERE LoopId = @LoopCounter
+	IF(@OldID != -1 
+	 AND (SELECT COUNT(*) FROM Plans WHERE Plans_Index_ID = @Plans_Index_ID) > 0
+	 AND (SELECT COUNT(*) FROM AssetTracking WHERE AssetTracking_ID = @AssetTrackingID) > 0)
+	BEGIN
 --Insert prepared data from temp table to target table
 INSERT INTO [dbo].[MarketValuationTracking]
+OUTPUT Inserted.MarketValuation_ID INTO @IdentityValue
 SELECT Plans_Index_ID,
 PYE_Year,
 PYE_Month,
@@ -96,7 +118,21 @@ Download,
 AssetTracking_ID,
 IsPortalDeleted
 FROM MarketValuationTracking_MP
-WHERE AssetTracking_ID in (SELECT AssetTracking_ID FROM AssetTracking)
+WHERE LoopId = @LoopCounter
+
+SET @NewID = (SELECT TOP 1 ID FROM @IdentityValue); 
+	DELETE FROM @IdentityValue;
+
+	--Insert oldId, newId into respective mapping table
+	INSERT INTO [dbo].[MarketValuationTracking_ID_Mapping]
+	VALUES(@OldID, @NewID)
+	
+ END
+   SELECT @LoopCounter  = MIN(LoopId) 
+   FROM [dbo].[MarketValuationTracking_MP]  WHERE LoopId > @LoopCounter
+
+END
+END
 
 IF @@TRANCOUNT > 0  
     COMMIT TRANSACTION;  

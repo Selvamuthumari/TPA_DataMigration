@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Migrate_ChildTables_Data1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{45DFF5A5-D242-484D-BDD7-D0A6E0363EF3}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{1A827838-20F2-4EAD-BCA2-52629E8727FD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -57,63 +57,63 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[14_PlanYearEnd.sql]"
+      DTS:refId="Package.ConnectionManagers[14_Portal_InfoGatheredTriggers.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{4303AA74-525F-419D-83C2-097A41E7C4C1}"
-      DTS:ObjectName="14_PlanYearEnd.sql">
+      DTS:DTSID="{DF94CA00-3161-4C98-9192-FF2503D84665}"
+      DTS:ObjectName="14_Portal_InfoGatheredTriggers.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\14_PlanYearEnd.sql" />
+          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\14_Portal_InfoGatheredTriggers.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[15_MonthlyStatement.sql]"
+      DTS:refId="Package.ConnectionManagers[15_Portal_Timeline.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{B1EBA090-9D7F-4E6F-9506-288408EEDAC7}"
-      DTS:ObjectName="15_MonthlyStatement.sql">
+      DTS:DTSID="{FDFC3297-7515-4E07-8D39-538F46DC1DB5}"
+      DTS:ObjectName="15_Portal_Timeline.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\15_MonthlyStatement.sql" />
+          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\15_Portal_Timeline.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[16_Portal_InfoGatheredTriggers.sql]"
+      DTS:refId="Package.ConnectionManagers[16_Advisor_Client_Link.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{AFAFAB88-F628-486A-BCEE-097FD92D8324}"
-      DTS:ObjectName="16_Portal_InfoGatheredTriggers.sql">
+      DTS:DTSID="{14EB1113-AE0D-4E07-815F-60D09ADA22A7}"
+      DTS:ObjectName="16_Advisor_Client_Link.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\16_Portal_InfoGatheredTriggers.sql" />
+          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\16_Advisor_Client_Link.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[17_Portal_Timeline.sql]"
+      DTS:refId="Package.ConnectionManagers[17_AdHocTodo.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{6873D70B-66D1-4A0C-B03E-CA166AFB2B3B}"
-      DTS:ObjectName="17_Portal_Timeline.sql">
+      DTS:DTSID="{52145FF8-D49E-49A3-9845-2F257528B0F3}"
+      DTS:ObjectName="17_AdHocTodo.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\17_Portal_Timeline.sql" />
+          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\17_AdHocTodo.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[18_Advisor_Client_Link.sql]"
+      DTS:refId="Package.ConnectionManagers[18_AssetTracking.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{FC8DE2E4-F92D-46CD-9E11-BE520476A033}"
-      DTS:ObjectName="18_Advisor_Client_Link.sql">
+      DTS:DTSID="{AA057DCC-93A5-4DB9-B185-4BD8A2030B42}"
+      DTS:ObjectName="18_AssetTracking.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\18_Advisor_Client_Link.sql" />
+          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\18_AssetTracking.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[19_AdHocTodo.sql]"
+      DTS:refId="Package.ConnectionManagers[19_Comm_Log.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{1543E4F9-32B0-413A-9172-8D1B9AB863E8}"
-      DTS:ObjectName="19_AdHocTodo.sql">
+      DTS:DTSID="{DAEE3375-DD92-496B-8D00-8522DAEB9870}"
+      DTS:ObjectName="19_Comm_Log.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\19_AdHocTodo.sql" />
+          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\19_Comm_Log.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -127,43 +127,43 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[20_AssetTracking.sql]"
+      DTS:refId="Package.ConnectionManagers[20_MarketValuationTracking.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{E73D74ED-EEF7-4309-8FEE-E2F1A31093D9}"
-      DTS:ObjectName="20_AssetTracking.sql">
+      DTS:DTSID="{15DB1DE1-48A4-49C6-B7E0-4D30671994BD}"
+      DTS:ObjectName="20_MarketValuationTracking.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\20_AssetTracking.sql" />
+          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\20_MarketValuationTracking.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[21_Comm_Log.sql]"
+      DTS:refId="Package.ConnectionManagers[21_ScheduleATracking.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{B863EE83-FE7E-4AB9-8E93-4F2270337035}"
-      DTS:ObjectName="21_Comm_Log.sql">
+      DTS:DTSID="{0B4E98E9-82BB-42E9-B88C-F9B3B391A7F4}"
+      DTS:ObjectName="21_ScheduleATracking.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\21_Comm_Log.sql" />
+          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\21_ScheduleATracking.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[22_MarketValuationTracking.sql]"
+      DTS:refId="Package.ConnectionManagers[22_PlanYearEnd.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{A7CE71A1-A045-4ED1-9772-49BC36A2D488}"
-      DTS:ObjectName="22_MarketValuationTracking.sql">
+      DTS:DTSID="{2733DBDF-449B-4ED2-9803-45B10BFF796A}"
+      DTS:ObjectName="22_PlanYearEnd.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\22_MarketValuationTracking.sql" />
+          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\22_PlanYearEnd.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[23_ScheduleATracking.sql]"
+      DTS:refId="Package.ConnectionManagers[23_MonthlyStatement.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{B4109833-106B-41CF-AA60-3751346D8352}"
-      DTS:ObjectName="23_ScheduleATracking.sql">
+      DTS:DTSID="{A480B7C6-6487-440E-9EA4-061FDAE1A8C3}"
+      DTS:ObjectName="23_MonthlyStatement.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\23_ScheduleATracking.sql" />
+          DTS:ConnectionString="C:\Users\Admin\source\repos\TPA_DataMigration\TPA_MigrationScripts\Child_MigrationScripts\23_MonthlyStatement.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -348,105 +348,105 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\14_PlanYearEnd"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{DE8E22A6-9CB2-4066-A79F-D1A4B69C2B2D}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="14_PlanYearEnd"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
-          SQLTask:SqlStmtSourceType="FileConnection"
-          SQLTask:SqlStatementSource="14_PlanYearEnd.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\15_MonthlyStatement"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{20CCAF07-DCE6-4B1A-BB9D-8D649156E7F0}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="15_MonthlyStatement"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
-          SQLTask:SqlStmtSourceType="FileConnection"
-          SQLTask:SqlStatementSource="15_MonthlyStatement.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\16_Portal_InfoGatheredTriggers"
+      DTS:refId="Package\14_Portal_InfoGatheredTriggers"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{1421A6D3-CFF6-42C6-907D-3C4668E74286}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="16_Portal_InfoGatheredTriggers"
+      DTS:ObjectName="14_Portal_InfoGatheredTriggers"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
           SQLTask:SqlStmtSourceType="FileConnection"
-          SQLTask:SqlStatementSource="16_Portal_InfoGatheredTriggers.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="14_Portal_InfoGatheredTriggers.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\17_Portal_Timeline"
+      DTS:refId="Package\15_Portal_Timeline"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{663B17D3-BADC-4851-B65B-0DBFEF8D3CE7}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="17_Portal_Timeline"
+      DTS:ObjectName="15_Portal_Timeline"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
           SQLTask:SqlStmtSourceType="FileConnection"
-          SQLTask:SqlStatementSource="17_Portal_Timeline.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="15_Portal_Timeline.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\18_Advisor_Client_Link"
+      DTS:refId="Package\16_Advisor_Client_Link"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{C0976296-F7BA-487F-96A6-40B3893D2603}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="18_Advisor_Client_Link"
+      DTS:ObjectName="16_Advisor_Client_Link"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
           SQLTask:SqlStmtSourceType="FileConnection"
-          SQLTask:SqlStatementSource="18_Advisor_Client_Link.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="16_Advisor_Client_Link.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\19_AdHocTodo"
+      DTS:refId="Package\17_AdHocTodo"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{CDEA6018-7243-4EE0-ADC3-2488FD99FD86}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="19_AdHocTodo"
+      DTS:ObjectName="17_AdHocTodo"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
           SQLTask:SqlStmtSourceType="FileConnection"
-          SQLTask:SqlStatementSource="19_AdHocTodo.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="17_AdHocTodo.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\18_AssetTracking"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{0539C819-49C8-4B04-9911-DCB4F6EC8343}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="18_AssetTracking"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
+          SQLTask:SqlStmtSourceType="FileConnection"
+          SQLTask:SqlStatementSource="18_AssetTracking.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\19_Comm_Log"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{5CA8EA2B-F9C4-4BB2-88DD-4E4460C6A916}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="19_Comm_Log"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
+          SQLTask:SqlStmtSourceType="FileConnection"
+          SQLTask:SqlStatementSource="19_Comm_Log.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -467,71 +467,71 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\20_AssetTracking"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{0539C819-49C8-4B04-9911-DCB4F6EC8343}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="20_AssetTracking"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
-          SQLTask:SqlStmtSourceType="FileConnection"
-          SQLTask:SqlStatementSource="20_AssetTracking.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\21_Comm_Log"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{5CA8EA2B-F9C4-4BB2-88DD-4E4460C6A916}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="21_Comm_Log"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
-          SQLTask:SqlStmtSourceType="FileConnection"
-          SQLTask:SqlStatementSource="21_Comm_Log.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\22_MarketValuationTracking"
+      DTS:refId="Package\20_MarketValuationTracking"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{E2617F7A-5E5F-4C9C-9816-0F683DAA8709}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="22_MarketValuationTracking"
+      DTS:ObjectName="20_MarketValuationTracking"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
           SQLTask:SqlStmtSourceType="FileConnection"
-          SQLTask:SqlStatementSource="22_MarketValuationTracking.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="20_MarketValuationTracking.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\23_ScheduleATracking"
+      DTS:refId="Package\21_ScheduleATracking"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{6039D8BD-231F-40AA-BEBF-832BBA08EBCC}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="23_ScheduleATracking"
+      DTS:ObjectName="21_ScheduleATracking"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
           SQLTask:SqlStmtSourceType="FileConnection"
-          SQLTask:SqlStatementSource="23_ScheduleATracking.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="21_ScheduleATracking.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\22_PlanYearEnd"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{DE8E22A6-9CB2-4066-A79F-D1A4B69C2B2D}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="22_PlanYearEnd"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
+          SQLTask:SqlStmtSourceType="FileConnection"
+          SQLTask:SqlStatementSource="22_PlanYearEnd.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\23_MonthlyStatement"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{20CCAF07-DCE6-4B1A-BB9D-8D649156E7F0}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="23_MonthlyStatement"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FB000E58-A956-4AA8-BD26-5238BE63E8B0}"
+          SQLTask:SqlStmtSourceType="FileConnection"
+          SQLTask:SqlStatementSource="23_MonthlyStatement.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -741,67 +741,67 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 12]"
       DTS:CreationName=""
-      DTS:DTSID="{E5BBA613-EA78-4E21-AF1B-5575A04E9E14}"
+      DTS:DTSID="{804FFDB8-7903-4EA1-B4D3-1E2FAAB2E7B7}"
       DTS:From="Package\13_Plans_YearToYear"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 12"
-      DTS:To="Package\14_PlanYearEnd" />
+      DTS:To="Package\14_Portal_InfoGatheredTriggers" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 13]"
       DTS:CreationName=""
-      DTS:DTSID="{C701071D-DF20-4D07-8E20-809FFEA77F6D}"
-      DTS:From="Package\14_PlanYearEnd"
+      DTS:DTSID="{164E669C-AC16-4736-8B09-753CE89D1722}"
+      DTS:From="Package\21_ScheduleATracking"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 13"
-      DTS:To="Package\15_MonthlyStatement" />
+      DTS:To="Package\22_PlanYearEnd" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 14]"
       DTS:CreationName=""
-      DTS:DTSID="{6F7F03AC-266A-4243-B7AB-008481823A17}"
-      DTS:From="Package\15_MonthlyStatement"
+      DTS:DTSID="{EE6BA494-14FA-4B1B-9A59-A01FF019AED5}"
+      DTS:From="Package\22_PlanYearEnd"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 14"
-      DTS:To="Package\16_Portal_InfoGatheredTriggers" />
+      DTS:To="Package\23_MonthlyStatement" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 15]"
       DTS:CreationName=""
       DTS:DTSID="{95F25DC8-789E-45F0-8A70-6105ACFD3F52}"
-      DTS:From="Package\16_Portal_InfoGatheredTriggers"
+      DTS:From="Package\14_Portal_InfoGatheredTriggers"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 15"
-      DTS:To="Package\17_Portal_Timeline" />
+      DTS:To="Package\15_Portal_Timeline" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 16]"
       DTS:CreationName=""
       DTS:DTSID="{5140EA04-14AE-4370-8DD6-CC4844873276}"
-      DTS:From="Package\17_Portal_Timeline"
+      DTS:From="Package\15_Portal_Timeline"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 16"
-      DTS:To="Package\18_Advisor_Client_Link" />
+      DTS:To="Package\16_Advisor_Client_Link" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 17]"
       DTS:CreationName=""
       DTS:DTSID="{049721E9-0F00-45DC-83CD-B33A728DD737}"
-      DTS:From="Package\18_Advisor_Client_Link"
+      DTS:From="Package\16_Advisor_Client_Link"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 17"
-      DTS:To="Package\19_AdHocTodo" />
+      DTS:To="Package\17_AdHocTodo" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 18]"
       DTS:CreationName=""
       DTS:DTSID="{E6C4DF5B-B3B3-4A16-89D2-A91F1061EBE4}"
-      DTS:From="Package\19_AdHocTodo"
+      DTS:From="Package\17_AdHocTodo"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 18"
-      DTS:To="Package\20_AssetTracking" />
+      DTS:To="Package\18_AssetTracking" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 19]"
       DTS:CreationName=""
       DTS:DTSID="{0D174029-BE21-4BE3-9825-EAB360938897}"
-      DTS:From="Package\20_AssetTracking"
+      DTS:From="Package\18_AssetTracking"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 19"
-      DTS:To="Package\21_Comm_Log" />
+      DTS:To="Package\19_Comm_Log" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
@@ -814,23 +814,23 @@
       DTS:refId="Package.PrecedenceConstraints[Constraint 20]"
       DTS:CreationName=""
       DTS:DTSID="{7F14346B-8025-460E-BD88-6A639847D5E4}"
-      DTS:From="Package\21_Comm_Log"
+      DTS:From="Package\19_Comm_Log"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 20"
-      DTS:To="Package\22_MarketValuationTracking" />
+      DTS:To="Package\20_MarketValuationTracking" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 21]"
       DTS:CreationName=""
       DTS:DTSID="{4329AFBF-0757-4BB9-828D-713F3BFE838B}"
-      DTS:From="Package\22_MarketValuationTracking"
+      DTS:From="Package\20_MarketValuationTracking"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 21"
-      DTS:To="Package\23_ScheduleATracking" />
+      DTS:To="Package\21_ScheduleATracking" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 22]"
       DTS:CreationName=""
-      DTS:DTSID="{0E961BCF-7477-4DE6-AA42-EA4192EA484E}"
-      DTS:From="Package\23_ScheduleATracking"
+      DTS:DTSID="{2AC6C6E4-7DC1-45C3-8F5B-4686B7F22365}"
+      DTS:From="Package\23_MonthlyStatement"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 22"
       DTS:To="Package\24_ComplianceQuestionGroup" />
@@ -933,56 +933,56 @@
           TopLeft="367.999985595545,1308.0666689878" />
         <NodeLayout
           Size="202.4,41.6"
-          Id="Package\14_PlanYearEnd"
-          TopLeft="382.166651699279,1410.53333566136" />
-        <NodeLayout
-          Size="202.4,41.6"
-          Id="Package\15_MonthlyStatement"
-          TopLeft="380.499985098839,1520.8000023969" />
+          Id="Package\22_PlanYearEnd"
+          TopLeft="365.499985694886,2468.20000229359" />
         <NodeLayout
           Size="285.6,41.6"
-          Id="Package\16_Portal_InfoGatheredTriggers"
-          TopLeft="352.166652891372,1624.13333574401" />
+          Id="Package\14_Portal_InfoGatheredTriggers"
+          TopLeft="342.166653288736,1447.33333433893" />
+        <NodeLayout
+          Size="202.4,41.6"
+          Id="Package\23_MonthlyStatement"
+          TopLeft="372.999985396862,2604.46666923576" />
         <NodeLayout
           Size="168,41.6"
-          Id="Package\17_Portal_Timeline"
-          TopLeft="411.333317206966,1726.60000241756" />
+          Id="Package\15_Portal_Timeline"
+          TopLeft="399.666651003891,1560.20000109514" />
         <NodeLayout
           Size="187.2,41.6"
-          Id="Package\18_Advisor_Client_Link"
-          TopLeft="405.499984105429,1837.73333582666" />
+          Id="Package\16_Advisor_Client_Link"
+          TopLeft="401.333317604331,1685.2000012811" />
         <NodeLayout
-          Size="187.2,41.6"
-          Id="Package\19_AdHocTodo"
-          TopLeft="396.333317803013,1943.66666919443" />
+          Size="150.4,41.6"
+          Id="Package\17_AdHocTodo"
+          TopLeft="393.833317902354,1809.33333479351" />
         <NodeLayout
           Size="166.4,41.6"
           Id="Package\2_Contact_Method"
           TopLeft="399.666651003891,147.833333657053" />
         <NodeLayout
           Size="187.2,41.6"
-          Id="Package\20_AssetTracking"
-          TopLeft="389.666651401256,2052.20000258287" />
+          Id="Package\18_AssetTracking"
+          TopLeft="379.66665179862,1933.46666830593" />
         <NodeLayout
           Size="187.2,41.6"
-          Id="Package\21_Comm_Log"
-          TopLeft="392.166651301915,2162.46666931841" />
+          Id="Package\19_Comm_Log"
+          TopLeft="375.499985297522,2056.73333514478" />
         <NodeLayout
           Size="234.4,41.6"
-          Id="Package\22_MarketValuationTracking"
-          TopLeft="360.499985893568,2273.60000272751" />
+          Id="Package\20_MarketValuationTracking"
+          TopLeft="359.666652593348,2185.20000202497" />
         <NodeLayout
           Size="234.4,41.6"
-          Id="Package\23_ScheduleATracking"
-          TopLeft="352.166652891372,2374.33333605395" />
+          Id="Package\21_ScheduleATracking"
+          TopLeft="357.99998599291,2320.60000229358" />
         <NodeLayout
           Size="234.4,41.6"
           Id="Package\24_ComplianceQuestionGroup"
-          TopLeft="352.166652891372,2476.80000272751" />
+          TopLeft="352.166652891372,2750.80000272751" />
         <NodeLayout
           Size="234.4,41.6"
           Id="Package\25_ComplianceQuestions"
-          TopLeft="352.166652891372,2578.40000272751" />
+          TopLeft="352.166652891372,2852.40000272751" />
         <NodeLayout
           Size="116.8,41.6"
           Id="Package\3_Notes"
@@ -1112,109 +1112,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="469.199985595545,1349.6666689878">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="14.1666661037338,60.8666666735542"
-              Start="0,0"
-              End="14.1666661037338,53.3666666735542">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.4333333367771" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.4333333367771"
-                    Point2="0,30.4333333367771"
-                    Point3="4,30.4333333367771" />
-                  <mssgle:LineSegment
-                    End="10.1666661037338,30.4333333367771" />
-                  <mssgle:CubicBezierSegment
-                    Point1="10.1666661037338,30.4333333367771"
-                    Point2="14.1666661037338,30.4333333367771"
-                    Point3="14.1666661037338,34.4333333367771" />
-                  <mssgle:LineSegment
-                    End="14.1666661037338,53.3666666735542" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 13]"
-          TopLeft="482.533318399059,1452.13333566136">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,68.666666735543"
-              Start="0,0"
-              End="0,61.166666735543">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,61.166666735543" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 14]"
-          TopLeft="481.699985098839,1562.4000023969">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="13.266667792533,61.7333333471142"
-              Start="0,0"
-              End="13.266667792533,54.2333333471142">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.8666666735571" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.8666666735571"
-                    Point2="0,30.8666666735571"
-                    Point3="4,30.8666666735571" />
-                  <mssgle:LineSegment
-                    End="9.26666779253304,30.8666666735571" />
-                  <mssgle:CubicBezierSegment
-                    Point1="9.26666779253304,30.8666666735571"
-                    Point2="13.266667792533,30.8666666735571"
-                    Point3="13.266667792533,34.8666666735571" />
-                  <mssgle:LineSegment
-                    End="13.266667792533,54.2333333471142" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 15]"
-          TopLeft="495.149985049169,1665.73333574401">
+          TopLeft="484.316652146313,1488.93333433893">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.866666673546"
+              EndConnector="0,71.2666667562057"
               Start="0,0"
-              End="0,53.366666673546">
+              End="0,63.7666667562057">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.366666673546" />
+                    End="0,63.7666667562057" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1225,18 +1135,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 16]"
-          TopLeft="497.216650656198,1768.20000241756">
+          TopLeft="483.666651003891,1601.80000109514">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,69.5333334090974"
+              EndConnector="11.2666666004399,83.4000001859652"
               Start="0,0"
-              End="0,62.0333334090974">
+              End="11.2666666004399,75.9000001859652">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,62.0333334090974" />
+                    End="0,37.7000000929826" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.7000000929826"
+                    Point2="0,41.7000000929826"
+                    Point3="4,41.7000000929826" />
+                  <mssgle:LineSegment
+                    End="7.26666660043986,41.7000000929826" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.26666660043986,41.7000000929826"
+                    Point2="11.2666666004399,41.7000000929826"
+                    Point3="11.2666666004399,45.7000000929826" />
+                  <mssgle:LineSegment
+                    End="11.2666666004399,75.9000001859652" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1247,30 +1169,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 17]"
-          TopLeft="499.099984105429,1879.33333582666">
+          TopLeft="494.933317604331,1726.8000012811">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-9.16666630241616,64.3333333677715"
+              EndConnector="-25.8999997019766,82.5333335124105"
               Start="0,0"
-              End="-9.16666630241616,56.8333333677715">
+              End="-25.8999997019766,75.0333335124105">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.1666666838858" />
+                    End="0,37.2666667562053" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,28.1666666838858"
-                    Point2="0,32.1666666838858"
-                    Point3="-4,32.1666666838858" />
+                    Point1="0,37.2666667562053"
+                    Point2="0,41.2666667562053"
+                    Point3="-4,41.2666667562053" />
                   <mssgle:LineSegment
-                    End="-5.16666630241616,32.1666666838858" />
+                    End="-21.8999997019766,41.2666667562053" />
                   <mssgle:CubicBezierSegment
-                    Point1="-5.16666630241616,32.1666666838858"
-                    Point2="-9.16666630241616,32.1666666838858"
-                    Point3="-9.16666630241616,36.1666666838858" />
+                    Point1="-21.8999997019766,41.2666667562053"
+                    Point2="-25.8999997019766,41.2666667562053"
+                    Point3="-25.8999997019766,45.2666667562053" />
                   <mssgle:LineSegment
-                    End="-9.16666630241616,56.8333333677715" />
+                    End="-25.8999997019766,75.0333335124105" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1281,18 +1203,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 18]"
-          TopLeft="486.599984602134,1985.26666919443">
+          TopLeft="471.149984850487,1850.93333479351">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,66.933333388434"
+              EndConnector="0,82.533333512418"
               Start="0,0"
-              End="0,59.433333388434">
+              End="0,75.033333512418">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,59.433333388434" />
+                    End="0,75.033333512418" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1303,18 +1225,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 19]"
-          TopLeft="484.516651351585,2093.80000258287">
+          TopLeft="471.183318548071,1975.06666830593">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,68.666666735543"
+              EndConnector="0,81.6666668388548"
               Start="0,0"
-              End="0,61.166666735543">
+              End="0,74.1666668388548">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,61.166666735543" />
+                    End="0,74.1666668388548" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1359,30 +1281,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 20]"
-          TopLeft="485.766651301915,2204.06666931841">
+          TopLeft="472.983318945435,2098.33333514478">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-8.06666540834652,69.5333334090974"
+              EndConnector="0,86.8666668801866"
               Start="0,0"
-              End="-8.06666540834652,62.0333334090974">
+              End="0,79.3666668801866">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.7666667045487" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30.7666667045487"
-                    Point2="0,34.7666667045487"
-                    Point3="-4,34.7666667045487" />
-                  <mssgle:LineSegment
-                    End="-4.06666540834652,34.7666667045487" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.06666540834652,34.7666667045487"
-                    Point2="-8.06666540834652,34.7666667045487"
-                    Point3="-8.06666540834652,38.7666667045487" />
-                  <mssgle:LineSegment
-                    End="-8.06666540834652,62.0333334090974" />
+                    End="0,79.3666668801866" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1393,52 +1303,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 21]"
-          TopLeft="477.699985893568,2315.20000272751">
+          TopLeft="476.033319293129,2226.80000202497">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-8.33333300219641,59.1333333264456"
+              EndConnector="0,93.8000002686122"
               Start="0,0"
-              End="-8.33333300219641,51.6333333264456">
+              End="0,86.3000002686122">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5666666632228" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.5666666632228"
-                    Point2="0,29.5666666632228"
-                    Point3="-4,29.5666666632228" />
-                  <mssgle:LineSegment
-                    End="-4.33333300219641,29.5666666632228" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.33333300219641,29.5666666632228"
-                    Point2="-8.33333300219641,29.5666666632228"
-                    Point3="-8.33333300219641,33.5666666632228" />
-                  <mssgle:LineSegment
-                    End="-8.33333300219641,51.6333333264456" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 22]"
-          TopLeft="469.366652891372,2415.93333605395">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.8666666735544"
-              Start="0,0"
-              End="0,53.3666666735544">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53.3666666735544" />
+                    End="0,86.3000002686122" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1449,7 +1325,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 23]"
-          TopLeft="469.366652891372,2518.40000272751">
+          TopLeft="469.366652891372,2792.40000272751">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1627,6 +1503,118 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,59.4333333884348" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="469.199985595545,1349.6666689878">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15.766667693191,97.66666535113"
+              Start="0,0"
+              End="15.766667693191,90.16666535113">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.833332675565" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.833332675565"
+                    Point2="0,48.833332675565"
+                    Point3="4,48.833332675565" />
+                  <mssgle:LineSegment
+                    End="11.766667693191,48.833332675565" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.766667693191,48.833332675565"
+                    Point2="15.766667693191,48.833332675565"
+                    Point3="15.766667693191,52.833332675565" />
+                  <mssgle:LineSegment
+                    End="15.766667693191,90.16666535113" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 13]"
+          TopLeft="475.199985992909,2362.20000229358">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.50000029802379,106.000000000004"
+              Start="0,0"
+              End="-8.50000029802379,98.5000000000036">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.0000000000018" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49.0000000000018"
+                    Point2="0,53.0000000000018"
+                    Point3="-4,53.0000000000018" />
+                  <mssgle:LineSegment
+                    End="-4.50000029802379,53.0000000000018" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.50000029802379,53.0000000000018"
+                    Point2="-8.50000029802379,53.0000000000018"
+                    Point3="-8.50000029802379,57.0000000000018" />
+                  <mssgle:LineSegment
+                    End="-8.50000029802379,98.5000000000036" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 14]"
+          TopLeft="470.449985545874,2509.80000229359">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,94.6666669421693"
+              Start="0,0"
+              End="0,87.1666669421693">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,87.1666669421693" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 22]"
+          TopLeft="471.783319144117,2646.06666923575">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,104.733333491755"
+              Start="0,0"
+              End="0,97.2333334917553">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,97.2333334917553" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

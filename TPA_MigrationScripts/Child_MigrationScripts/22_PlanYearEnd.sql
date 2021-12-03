@@ -124,6 +124,33 @@ SELECT @LoopCounter = MIN(LoopId),
 		@MaxId = MAX(LoopId) 
 FROM [dbo].[PlanYearEnd_MP]
 
+--5- Schedule A
+UPDATE PlanYearEnd_MP
+SET TrackingDoc_Type_Add = STM.New_ID
+--SELECT *
+FROM PlanYearEnd_MP PYE
+JOIN ScheduleATracking_ID_Mapping STM
+ON PYE.TrackingDoc_Type_Add = STM.Old_ID
+WHERE TrackingDoc_Type_ID=5 AND TrackingDoc_Type_Add != -1 AND TrackingDoc_Type_Add != -2
+
+--11- Asset
+UPDATE PlanYearEnd_MP
+SET TrackingDoc_Type_Add = STM.New_ID
+--SELECT *
+FROM PlanYearEnd_MP PYE
+JOIN AssetTracking_ID_Mapping STM
+ON PYE.TrackingDoc_Type_Add = STM.Old_ID
+WHERE TrackingDoc_Type_ID=11 AND TrackingDoc_Type_Add != -1 AND TrackingDoc_Type_Add != -2
+
+--15- Market Valuation
+UPDATE PlanYearEnd_MP
+SET TrackingDoc_Type_Add = STM.New_ID
+--SELECT *
+FROM PlanYearEnd_MP PYE
+JOIN MarketValuationTracking_ID_Mapping STM
+ON PYE.TrackingDoc_Type_Add = STM.Old_ID
+WHERE TrackingDoc_Type_ID=15 AND TrackingDoc_Type_Add != -1 AND TrackingDoc_Type_Add != -2
+
 IF ((SELECT COUNT(*) FROM [dbo].[PlanYearEnd_MP]) > 0)
 BEGIN
 WHILE ( @LoopCounter IS NOT NULL
