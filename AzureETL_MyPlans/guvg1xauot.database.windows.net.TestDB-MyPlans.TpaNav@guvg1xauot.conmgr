@@ -7,6 +7,10 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=DESKTOP-1V5A3IQ;Initial Catalog=PROD_MyPlans_Dec3;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      DTS:ConnectionString="Data Source=guvg1xauot.database.windows.net;User ID=TpaNav@guvg1xauot;Initial Catalog=TestDB-MyPlans-23Nov;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiU+eTjRVJEqcWea3gF/yGQAAAAACAAAAAAADZgAAwAAAABAAAAAWI6QpXdycu8nATivh/S+FAAAAAASAAACgAAAAEAAAAN1wihuXMZZZC+Zg4piAg52AAAAAOdR59M6hcxrpEYEFfulPqSxNOBSHuq+GTs1D+/65RgxNkjVksatkMoYOdt4TQuw9HBsBcc12q9YlRGuRiOVbvbQzOOK6PpCX0sQEtvYSMLia43n78Ef01lKZ4xUgeclDTXx70tqhsmq0bjWh+zsrYOvT0lI0pRIEMbLfaMkDy8gUAAAAAJwffW+9Udi/pKf0HgIwDrFxR5Q=</DTS:Password>
+    </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
