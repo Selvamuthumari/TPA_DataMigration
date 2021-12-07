@@ -4,7 +4,7 @@ BEGIN TRANSACTION;
   
 BEGIN TRY  
 --Get max ID value in table
-DECLARE @MaxIDExist INT = (SELECT MAX(Comm_Log_ID) FROM [dbo].[Comm_Log_MP]);--59636
+DECLARE @MaxIDExist INT = (SELECT MAX(Comm_Log_ID) FROM [dbo].[Comm_Log]);--59636
 
 --Insert @MaxIDExist into respective mapping table
 	SET IDENTITY_INSERT dbo.[Comm_Log_ID_Mapping] ON; 

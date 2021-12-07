@@ -19,6 +19,15 @@ FROM [dbo].[AssetTracking_MP] bc
 JOIN [dbo].[Advisor_Id_Mapping] um ON bc.Advisor = um.Old_ID
 WHERE bc.Advisor != -1
 
+--UPDATE [InvestmentPlatform] column
+UPDATE [dbo].[AssetTracking_MP]
+SET [InvestmentPlatform] = um.New_ID
+--SELECT *
+FROM [dbo].[AssetTracking_MP] bc
+JOIN [dbo].[InvestmentPlatforms_Lib_ID_Mapping] um ON bc.InvestmentPlatform = um.Old_ID
+WHERE -- AssetTracking_ID > (SELECT Old_ID FROM AssetTracking_ID_Mapping WHERE MapId=-1) AND 
+InvestmentPlatform !=-1
+
 --UPDATE Plan_Index_Id column
 UPDATE [dbo].[AssetTracking_MP]
 SET Plans_Index_ID = um.New_ID

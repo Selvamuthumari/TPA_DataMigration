@@ -4,10 +4,10 @@ BEGIN TRANSACTION;
 BEGIN TRY  
 DECLARE @LoopCounter INT , @MaxId INT, @LibName NVARCHAR(100), @OldID INT, @NewID INT, @TRIGGER_ID_COUNT INT, @PPC_TRIGGER_ID INT;
 DECLARE @IdentityValue AS TABLE(ID INT); 
-SET @PPC_TRIGGER_ID = (select max(TriggerId) as MAXIMUM_TRIGGER_ID from dbo.PortalWorkflow_Triggers_MP) ---  2352   Old 1 New Id 2353
+SET @PPC_TRIGGER_ID = (select max(TriggerId) as MAXIMUM_TRIGGER_ID from dbo.PortalWorkflow_Triggers) ---  2352   Old 1 New Id 2353
 
 --Get max ID value in table
-DECLARE @MaxIDExist INT = (SELECT MAX(Id) FROM [dbo].[PortalWorkflow_Triggers_MP]);--353
+DECLARE @MaxIDExist INT = (SELECT MAX(Id) FROM [dbo].[PortalWorkflow_Triggers]);--353
 
 --Insert @MaxIDExist into respective mapping table
 	SET IDENTITY_INSERT dbo.[PortalWorkflow_Triggers_ID_Mapping] ON; 

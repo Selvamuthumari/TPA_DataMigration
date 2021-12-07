@@ -17,3 +17,9 @@ SET FolderId = Cim.New_ID
 FROM PortalDefaults_MappingClientFoldersPlan_MP Pmp
 JOIN PortalDefaults_ClientFolders_ID_Mapping Cim on Cim.Old_ID = Pmp.FolderId
 END
+
+--Insert prepared data from temp table to target table
+INSERT INTO [dbo].[PortalDefaults_MappingClientFoldersPlan]
+SELECT Plans_Index_ID,
+FolderId
+FROM PortalDefaults_MappingClientFoldersPlan_MP
