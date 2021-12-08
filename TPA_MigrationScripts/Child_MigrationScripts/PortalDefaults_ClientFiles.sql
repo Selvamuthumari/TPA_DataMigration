@@ -1,34 +1,69 @@
-/*PortalDefaults_ClientFiles*/
+/* PortalDefaults_ClientFiles */
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
 
-IF OBJECT_ID('dbo.Client_Master_ID_Mapping') IS NOT NULL
-BEGIN
-UPDATE PortalDefaults_ClientFiles_MP
-SET ClientID = Cim.New_ID, FilePath = REPLACE(FilePath, CAST(Cim.Old_ID as varchar(10))+'/', CAST(Cim.New_ID as varchar(10))+'/')
+
+--Get max ID value in table
+DECLARE @MaxIDExist INT = (SELECT MAX(FileId) FROM [dbo].[PortalDefaults_ClientFiles]);
+
+--Insert @MaxIDExist into respective mapping table
+	SET IDENTITY_INSERT dbo.[PortalDefaults_ClientFiles_ID_Mapping] ON; 
+	INSERT INTO [dbo].[PortalDefaults_ClientFiles_ID_Mapping] (MapId, Old_ID, New_ID)
+	VALUES(-1, @MaxIDExist, -1)
+	SET IDENTITY_INSERT dbo.[PortalDefaults_ClientFiles_ID_Mapping] OFF; 
+ 
+ UPDATE PortalDefaults_ClientFiles_MP
+SET ClientID = Cim.New_ID, 
+FilePath = REPLACE(FilePath, CAST(Cim.Old_ID as varchar(10))+'/', CAST(Cim.New_ID as varchar(10))+'/')
 FROM PortalDefaults_ClientFiles_MP Pmp
 JOIN Client_Master_ID_Mapping Cim on Cim.Old_ID = Pmp.ClientID
-END
 
-/* Update table query */
-IF OBJECT_ID('dbo.PortalDefaults_ClientFolders_ID_Mapping') IS NOT NULL
-BEGIN
 UPDATE PortalDefaults_ClientFiles_MP
 SET FolderId = Cim.New_ID
 FROM PortalDefaults_ClientFiles_MP Pmp
 JOIN PortalDefaults_ClientFolders_ID_Mapping Cim on Cim.Old_ID = Pmp.FolderId
+
+DECLARE @LoopCounter INT , @MaxId INT, @LibName NVARCHAR(100), @OldID INT, @NewID INT;
+DECLARE @IdentityValue AS TABLE(ID INT); 
+SELECT @LoopCounter = MIN(LoopId),
+		@MaxId = MAX(LoopId) 
+FROM [dbo].[PortalDefaults_ClientFiles_MP]
+
+IF ((SELECT COUNT(*) FROM [dbo].[PortalDefaults_ClientFiles]) > 0)
+BEGIN
+WHILE ( @LoopCounter IS NOT NULL
+        AND  @LoopCounter <= @MaxId)
+BEGIN
+   SELECT	@OldID = [FileId],
+			@LibName = [FileName]
+   FROM [dbo].[PortalDefaults_ClientFiles_MP]  WHERE LoopId = @LoopCounter
+   --PRINT @LibName 
+
+	INSERT INTO [dbo].[PortalDefaults_ClientFiles] OUTPUT Inserted.FileId INTO @IdentityValue
+	  SELECT FolderId,
+			FileName,
+			FilePath,
+			ClientId,
+			FileSize,
+			UploadDate
+   		FROM [dbo].[PortalDefaults_ClientFiles_MP]  WHERE LoopId = @LoopCounter
+	SET @NewID = (SELECT TOP 1 ID FROM @IdentityValue); 
+	PRINT 'Data inserted' 
+	DELETE FROM @IdentityValue;
+
+ IF OBJECT_ID('dbo.PortalDefaults_ClientFiles_ID_Mapping') IS NOT NULL
+ BEGIN
+	INSERT INTO [dbo].[PortalDefaults_ClientFiles_ID_Mapping]
+	VALUES(@OldID, @NewID)   
 END
 
---Insert prepared data from temp table to target table
-INSERT INTO [dbo].[PortalDefaults_ClientFiles]
-SELECT FolderId,
-FileName,
-FilePath,
-ClientId,
-FileSize,
-UploadDate
-FROM PortalDefaults_ClientFiles_MP
+SELECT @LoopCounter  = MIN(LoopId) 
+   FROM [dbo].[PortalDefaults_ClientFiles_MP]  WHERE LoopId > @LoopCounter
+
+END
+END
+
 
 IF @@TRANCOUNT > 0  
     COMMIT TRANSACTION;  

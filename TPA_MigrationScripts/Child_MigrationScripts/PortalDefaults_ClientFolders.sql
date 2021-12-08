@@ -78,9 +78,9 @@ END
 
 IF OBJECT_ID('dbo.Plans_ID_Mapping') IS NOT NULL
 BEGIN
-UPDATE PortalDefaults_ClientFolders_MP
+UPDATE PortalDefaults_ClientFolders
 SET FolderName = '{dynamicPlanFolder~'+CAST(Cim.New_ID as varchar(10))+'}'
-FROM PortalDefaults_ClientFolders_MP Pmp
+FROM PortalDefaults_ClientFolders Pmp
 JOIN Plans_ID_Mapping Cim on Cim.Old_ID = SUBSTRING(FolderName, PATINDEX('%[0-9]%', FolderName), PATINDEX('%[0-9][^0-9]%', FolderName + 't') - PATINDEX('%[0-9]%',  FolderName) + 1)
 WHERE Pmp.FolderId  > (SELECT Old_ID FROM PortalDefaults_ClientFolders_ID_Mapping WHERE MapId=-1) AND
 FolderName LIKE '%{dynamicPlanFolder~%'
