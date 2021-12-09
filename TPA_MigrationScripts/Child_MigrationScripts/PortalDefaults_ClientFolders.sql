@@ -13,7 +13,7 @@ DECLARE @MaxIDExist INT = (SELECT MAX(FolderId) FROM [dbo].[PortalDefaults_Clien
 	VALUES(-1, @MaxIDExist, -1)
 	SET IDENTITY_INSERT dbo.[PortalDefaults_ClientFolders_ID_Mapping] OFF; 
  
-DECLARE @LoopCounter INT , @MaxId INT, @LibName NVARCHAR(100), @OldID INT, @NewID INT;
+DECLARE @LoopCounter INT , @MaxId INT, @LibName NVARCHAR(100), @Plan_ID INT, @OldID INT, @NewID INT;
 DECLARE @IdentityValue AS TABLE(ID INT); 
 SELECT @LoopCounter = MIN(LoopId),
 		@MaxId = MAX(LoopId) 
@@ -37,6 +37,12 @@ BEGIN
 END
 ELSE
 BEGIN
+	SET @Plan_ID = (SELECT CAST(SUBSTRING(FolderName, PATINDEX('%[0-9]%', FolderName), PATINDEX('%[0-9][^0-9]%', FolderName + 't') - PATINDEX('%[0-9]%',  FolderName) + 1) AS INT)
+   FROM [dbo].[PortalDefaults_ClientFolders_MP]  WHERE LoopId = @LoopCounter)
+	PRINT @Plan_ID
+
+	IF ((SELECT COUNT(*) FROM dbo.Plans_ID_Mapping WHERE Old_ID = @Plan_ID) > 0 )
+	BEGIN
 	INSERT INTO [dbo].[PortalDefaults_ClientFolders] OUTPUT Inserted.FolderId INTO @IdentityValue
 	  SELECT FolderName,
 			ParentFolderId,
@@ -52,12 +58,16 @@ BEGIN
 	SET @NewID = (SELECT TOP 1 ID FROM @IdentityValue); 
 	PRINT 'Data inserted' 
 	DELETE FROM @IdentityValue;
+	END
 END
 
  IF OBJECT_ID('dbo.PortalDefaults_ClientFolders_ID_Mapping') IS NOT NULL
  BEGIN
+	IF(@NewID IS NOT NULL)
+	BEGIN
 	INSERT INTO [dbo].[PortalDefaults_ClientFolders_ID_Mapping]
 	VALUES(@OldID, @NewID)   
+	END
 END
 
 SELECT @LoopCounter  = MIN(LoopId) 

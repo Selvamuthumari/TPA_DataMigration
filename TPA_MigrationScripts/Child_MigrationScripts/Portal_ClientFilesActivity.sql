@@ -1,5 +1,7 @@
 /*Portal_ClientFilesActivity */
-
+BEGIN TRANSACTION;  
+  
+BEGIN TRY 
 --UPDATE FileID
 UPDATE Portal_ClientFilesActivity_MP
 SET FileId = Cim.New_ID
@@ -27,3 +29,24 @@ IpAddress,
 Location,
 ClientId
 FROM Portal_ClientFilesActivity_MP
+WHERE ClientId in (Select New_ID from Client_Master_ID_Mapping)
+
+IF @@TRANCOUNT > 0  
+    COMMIT TRANSACTION;  
+END TRY  
+BEGIN CATCH  
+    IF @@TRANCOUNT > 0  
+        ROLLBACK TRANSACTION;  
+    INSERT INTO dbo.DataMigration_Errors
+    VALUES
+  (SUSER_SNAME(),
+   ERROR_NUMBER(),
+   ERROR_STATE(),
+   ERROR_SEVERITY(),
+   ERROR_LINE(),
+   ERROR_PROCEDURE(),
+   ERROR_MESSAGE(),
+   GETDATE());    
+END CATCH;  
+  
+GO

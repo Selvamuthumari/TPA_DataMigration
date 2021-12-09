@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{92F3FF93-84AA-44B6-AF5A-46FC8785AAAC}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{A1D30B34-4FBC-413F-9AA9-430C506767CC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,11 +25,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=guvg1xauot.database.windows.net;User ID=TpaNav@guvg1xauot;Initial Catalog=TestDB-PPC;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=guvg1xauot.database.windows.net;User ID=TpaNav@guvg1xauot;Initial Catalog=PPC-ProdDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiU+eTjRVJEqcWea3gF/yGQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADch/8Cw85UJXfMAhmxZD86AAAAAASAAACgAAAAEAAAABzWu1/yq05Fe3vo88K3dnwgAAAAZTmCMcXZEydrBbGSnbq9uImRnWz/50t2zh8dhbBmVagUAAAAozPgQBeKqMorCWG9Gt6BV7WSoUE</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiU+eTjRVJEqcWea3gF/yGQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACgWaK26jsmo//2dIIovz8hAAAAAASAAACgAAAAEAAAAKhCKkTBNpqrSLULZhm6E5UgAAAAmCyPYUiRJRbLWdHXYjAGU991qWh/rtLp1ueagdyh8dsUAAAA+mYz/+klRgk4pWBwa4qWvIt+WsU</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>

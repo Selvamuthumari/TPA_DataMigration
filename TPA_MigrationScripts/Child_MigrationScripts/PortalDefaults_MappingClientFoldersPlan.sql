@@ -1,3 +1,7 @@
+/* PortalDefaults_MappingClientFoldersPlan */
+BEGIN TRANSACTION;  
+  
+BEGIN TRY 
 /* Update table query */
 /*childtable ---- parenttable*/
 /*PortalDefaults_MappingClientFoldersPlan ---- Plans*/
@@ -23,3 +27,24 @@ INSERT INTO [dbo].[PortalDefaults_MappingClientFoldersPlan]
 SELECT Plans_Index_ID,
 FolderId
 FROM PortalDefaults_MappingClientFoldersPlan_MP
+WHERE Plans_Index_ID in (Select Old_ID from Plans_ID_Mapping)
+
+IF @@TRANCOUNT > 0  
+    COMMIT TRANSACTION;  
+END TRY  
+BEGIN CATCH  
+    IF @@TRANCOUNT > 0  
+        ROLLBACK TRANSACTION;  
+    INSERT INTO dbo.DataMigration_Errors
+    VALUES
+  (SUSER_SNAME(),
+   ERROR_NUMBER(),
+   ERROR_STATE(),
+   ERROR_SEVERITY(),
+   ERROR_LINE(),
+   ERROR_PROCEDURE(),
+   ERROR_MESSAGE(),
+   GETDATE());    
+END CATCH;  
+  
+GO

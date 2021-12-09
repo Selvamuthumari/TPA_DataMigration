@@ -24,7 +24,7 @@ SET FolderId = Cim.New_ID
 FROM PortalDefaults_ClientFiles_MP Pmp
 JOIN PortalDefaults_ClientFolders_ID_Mapping Cim on Cim.Old_ID = Pmp.FolderId
 
-DECLARE @LoopCounter INT , @MaxId INT, @LibName NVARCHAR(100), @OldID INT, @NewID INT;
+DECLARE @LoopCounter INT , @MaxId INT, @ClientID NVARCHAR(100), @OldID INT, @NewID INT;
 DECLARE @IdentityValue AS TABLE(ID INT); 
 SELECT @LoopCounter = MIN(LoopId),
 		@MaxId = MAX(LoopId) 
@@ -36,10 +36,11 @@ WHILE ( @LoopCounter IS NOT NULL
         AND  @LoopCounter <= @MaxId)
 BEGIN
    SELECT	@OldID = [FileId],
-			@LibName = [FileName]
+			@ClientID = [ClientId]
    FROM [dbo].[PortalDefaults_ClientFiles_MP]  WHERE LoopId = @LoopCounter
-   --PRINT @LibName 
-
+   --PRINT @ClientID 
+	IF ((SELECT COUNT(*) FROM dbo.Client_Master_ID_Mapping WHERE New_ID = @ClientID) > 0 )
+	BEGIN
 	INSERT INTO [dbo].[PortalDefaults_ClientFiles] OUTPUT Inserted.FileId INTO @IdentityValue
 	  SELECT FolderId,
 			FileName,
@@ -51,11 +52,15 @@ BEGIN
 	SET @NewID = (SELECT TOP 1 ID FROM @IdentityValue); 
 	PRINT 'Data inserted' 
 	DELETE FROM @IdentityValue;
+	END
 
  IF OBJECT_ID('dbo.PortalDefaults_ClientFiles_ID_Mapping') IS NOT NULL
  BEGIN
+	IF(@NewID IS NOT NULL)
+	BEGIN
 	INSERT INTO [dbo].[PortalDefaults_ClientFiles_ID_Mapping]
-	VALUES(@OldID, @NewID)   
+	VALUES(@OldID, @NewID)  
+	END
 END
 
 SELECT @LoopCounter  = MIN(LoopId) 
